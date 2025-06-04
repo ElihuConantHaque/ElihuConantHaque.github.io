@@ -8,12 +8,13 @@
         <script src="./assets/script.js" defer></script>
         <script src="./assets/checkout.js" defer></script>
         <script src="https://js.stripe.com/v3/"></script>
+        <script async src="https://js.stripe.com/v3/buy-button.js"></script>
 
         <!-- tailwind css -->
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="bg-gray-50 min-h-screen">
-        <header>
+    <body class="bg-gray-50 min-h-screen ">
+        <header style="position:sticky; top:0; z-index:1000;">
             <nav class="bg-white shadow-lg w-full">
                 <div class="w-full px-4 sm:px-6 lg:px-8 mx-auto">
                     <div class="flex justify-between h-16">
@@ -52,60 +53,39 @@
                 </div>
             </nav>
         </header>
-        <main class="w-full px-4 sm:px-6 lg:px-8 py-12 mx-auto">
-            <h1 class="text-4xl font-bold text-gray-900 mb-12 text-center">The Marketplace</h1>
-            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
-                <!-- Product 1 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card" data-product-id="mic-001">
-                    <img src="https://picsum.photos/400/300" alt="Product 1" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-gray-900">Vintage Microphone</h3>
-                        <p class="text-gray-600 mt-2">Professional grade vintage microphone, perfect for studio recording.</p>
-                        <div class="mt-4 flex justify-between items-center">
-                            <span class="text-xl font-bold text-indigo-600 price">$299.99</span>
-                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition buy-now-button">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
+        <main class="w-full px-4 sm:px-6 lg:px-8 py-12 mx-auto flex items-center justify-center min-h-[calc(100vh-4rem)]">
+            <h1 class="text-4xl font-bold text-gray-900 mb-12 text-center absolute top-12 left-0 right-0">The Marketplace</h1>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 max-w-6xl mx-auto"> 
+                <stripe-buy-button
+                    buy-button-id="buy_btn_1RWM2GFkz5i5SvfllIU0n7wj"
+                    publishable-key="pk_test_51RWLkYFkz5i5SvflUrJpm77pC4zujbWskeq16q4Y36IWZb1fphP8tilbA8wDewU4yFnoeXaNTYuCAVuaE8VDx9Ai00GA4YG2nk"
+                >
+                    
+                </stripe-buy-button>
 
-                <!-- Product 2 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card" data-product-id="interface-001">
-                    <img src="https://picsum.photos/400/301" alt="Product 2" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-gray-900">Audio Interface</h3>
-                        <p class="text-gray-600 mt-2">High-quality 2-channel USB audio interface with premium preamps.</p>
-                        <div class="mt-4 flex justify-between items-center">
-                            <span class="text-xl font-bold text-indigo-600 price">$199.99</span>
-                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition buy-now-button">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
+                <stripe-buy-button
+                buy-button-id="buy_btn_1RWMawFkz5i5SvflJuGgi4tH"
+                publishable-key="pk_test_51RWLkYFkz5i5SvflUrJpm77pC4zujbWskeq16q4Y36IWZb1fphP8tilbA8wDewU4yFnoeXaNTYuCAVuaE8VDx9Ai00GA4YG2nk"
+                >
+                </stripe-buy-button>
 
-                <!-- Product 3 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card" data-product-id="monitors-001">
-                    <img src="https://picsum.photos/400/302" alt="Product 3" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-gray-900">Studio Monitors</h3>
-                        <p class="text-gray-600 mt-2">Pair of professional studio monitors with crystal clear sound.</p>
-                        <div class="mt-4 flex justify-between items-center">
-                            <span class="text-xl font-bold text-indigo-600 price">$449.99</span>
-                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition buy-now-button">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
+                <stripe-buy-button
+                buy-button-id="buy_btn_1RWMcoFkz5i5Svfl6vZ0AlpN"
+                publishable-key="pk_test_51RWLkYFkz5i5SvflUrJpm77pC4zujbWskeq16q4Y36IWZb1fphP8tilbA8wDewU4yFnoeXaNTYuCAVuaE8VDx9Ai00GA4YG2nk"
+                >
+                </stripe-buy-button>
 
-                <!-- Product 4 -->
-                <div class="bg-white rounded-lg shadow-lg overflow-hidden product-card" data-product-id="midi-001">
-                    <img src="https://picsum.photos/400/303" alt="Product 4" class="w-full h-48 object-cover">
-                    <div class="p-4">
-                        <h3 class="text-lg font-semibold text-gray-900">MIDI Controller</h3>
-                        <p class="text-gray-600 mt-2">25-key MIDI controller with assignable knobs and pads.</p>
-                        <div class="mt-4 flex justify-between items-center">
-                            <span class="text-xl font-bold text-indigo-600 price">$149.99</span>
-                            <button class="bg-indigo-600 text-white px-4 py-2 rounded-md hover:bg-indigo-700 transition buy-now-button">Buy Now</button>
-                        </div>
-                    </div>
-                </div>
+                <stripe-buy-button
+                buy-button-id="buy_btn_1RWMcoFkz5i5Svfl6vZ0AlpN"
+                publishable-key="pk_test_51RWLkYFkz5i5SvflUrJpm77pC4zujbWskeq16q4Y36IWZb1fphP8tilbA8wDewU4yFnoeXaNTYuCAVuaE8VDx9Ai00GA4YG2nk"
+                >
+                </stripe-buy-button>
+
+                <stripe-buy-button
+                buy-button-id="buy_btn_1RWMcoFkz5i5Svfl6vZ0AlpN"
+                publishable-key="pk_test_51RWLkYFkz5i5SvflUrJpm77pC4zujbWskeq16q4Y36IWZb1fphP8tilbA8wDewU4yFnoeXaNTYuCAVuaE8VDx9Ai00GA4YG2nk"
+                >
+                </stripe-buy-button>
             </div>
         </main>
     </body>
