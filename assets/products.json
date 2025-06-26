@@ -1,0 +1,14 @@
+[
+    {
+      "title": "Tuba Bell fixer",
+      "image": "assets/images/products/Photo 2—1.jpg",
+      "description": "A beautiful tuba recording. High quality, professionally mastered.",
+      "stripeLink": "https://buy.stripe.com/test_28EaEX3Dr0as7NEbWh5wI02"
+    },
+    {
+      "title": "Machine",
+      "image": "assets/images/products/Photo 2—2.jpg",
+      "description": "Euphonium solo album with a variety of styles.",
+      "stripeLink": "https://buy.stripe.com/test_1234567890abcdef"
+    }
+  ]

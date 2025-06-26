@@ -1,40 +1,43 @@
-document.addEventListener('DOMContentLoaded', () => {
-    const mobileMenuButton = document.getElementById('mobile-menu-button');
-    const mobileMenu = document.getElementById('mobile-menu');
-    let isMenuOpen = false;
+// Mobile menu functionality
+const menuButton = document.getElementById('menu-button');
+const dropdownMenu = document.getElementById('dropdown-menu');
 
-    if (mobileMenuButton && mobileMenu) {
-        mobileMenuButton.addEventListener('click', () => {
-            isMenuOpen = !isMenuOpen;
-            mobileMenu.classList.toggle('hidden');
-            
-            // Update button aria-expanded
-            mobileMenuButton.setAttribute('aria-expanded', isMenuOpen);
-            
-            // Update button icon
-            const icon = mobileMenuButton.querySelector('svg');
-            if (isMenuOpen) {
-                icon.innerHTML = `
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12" />
-                `;
-            } else {
-                icon.innerHTML = `
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                `;
-            }
-        });
+if (menuButton && dropdownMenu) {
+    menuButton.addEventListener('click', (e) => {
+        e.stopPropagation();
+        dropdownMenu.classList.toggle('hidden');
+    });
 
-        // Close mobile menu when clicking outside
-        document.addEventListener('click', (event) => {
-            if (isMenuOpen && !mobileMenuButton.contains(event.target) && !mobileMenu.contains(event.target)) {
-                isMenuOpen = false;
-                mobileMenu.classList.add('hidden');
-                mobileMenuButton.setAttribute('aria-expanded', 'false');
-                const icon = mobileMenuButton.querySelector('svg');
-                icon.innerHTML = `
-                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
-                `;
-            }
-        });
-    }
+    document.addEventListener('click', (e) => {
+        if (!dropdownMenu.classList.contains('hidden') && !dropdownMenu.contains(e.target) && e.target !== menuButton) {
+            dropdownMenu.classList.add('hidden');
+        }
+    });
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+    const contactForm = document.getElementById('contact-form');
+    const statusMessage = document.getElementById('status-message');
+
+    contactForm.addEventListener('submit', function(event) {
+        event.preventDefault(); // Prevent the default form submission (page reload)
+
+        statusMessage.textContent = 'Sending...';
+        statusMessage.className = 'mt-4 text-center text-lg text-blue-400';
+
+        // These IDs are from your EmailJS Dashboard -> Email Services and Email Templates
+        const serviceID = 'YOUR_EMAILJS_SERVICE_ID'; // e.g., 'default_service'
+        const templateID = 'YOUR_EMAILJS_TEMPLATE_ID'; // e.g., 'contact_form_template'
+
+        emailjs.sendForm(serviceID, templateID, this)
+            .then(() => {
+                statusMessage.textContent = 'Message sent successfully!';
+                statusMessage.className = 'mt-4 text-center text-lg text-green-400';
+                contactForm.reset(); // Clear the form
+            }, (error) => {
+                console.error('FAILED...', error);
+                statusMessage.textContent = `Failed to send message: ${error.text || error}`;
+                statusMessage.className = 'mt-4 text-center text-lg text-red-500';
+            });
+    });
 });

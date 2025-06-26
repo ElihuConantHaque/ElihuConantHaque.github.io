@@ -10,195 +10,230 @@
 
         <!-- tailwind css -->
         <script src="https://cdn.tailwindcss.com"></script>
+        
+        <script src="https://smtpjs.com/v3/smtp.js" defer></script>
     </head>
     <!-- <body class="bg-gray-50 min-h-screen flex flex-col"> -->
     <body class="min-w-screen min-h-screen">
-        <header>
-            <nav class="bg-black text-white shadow-lg w-full h-16 flex items-center justify-between px-4 relative">
-                <!-- Mobile: Menu button left, h1 right -->
-                <div class="flex items-center w-full md:hidden">
-                    <div class="relative inline-block text-left m-4">
-                        <!-- Button -->
-                        <button id="menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-yellow-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white">
-                        <span class="sr-only">Open menu</span>
-                        <!-- Icon -->
-                        <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke="white">
-                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+        <div class="relative z-10">
+            <header>
+                <nav class="bg-black text-white shadow-lg w-full h-16 flex items-center justify-between px-4 relative">
+                    <!-- Mobile: Menu button left, h1 right -->
+                    <div class="flex items-center w-full md:hidden">
+                        <div class="relative inline-block text-left m-4">
+                            <!-- Button -->
+                            <button id="menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-yellow-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white">
+                            <span class="sr-only">Open menu</span>
+                            <!-- Icon -->
+                            <svg class="h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="white" viewBox="0 0 24 24" stroke="white">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
+                            </svg>
+                            </button>
+
+                            <!-- Mobile Dropdown -->
+                            <div id="dropdown-menu" class="hidden absolute w-48 bg-black rounded-md shadow-lg z-20">
+                                <a href="calender.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Calendar</a>
+                                <a href="media.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Media</a>
+                                <a href="products.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Products</a>
+                            </div>
+                        </div>
+                        <div class="ml-auto">
+                            <h1 class="text-xl font-bold p-4"><a href="index.html">E S C-H</a></h1>
+                        </div>
+                    </div>
+
+                    <!-- Desktop: Menu left, h1 right -->
+                    <div class="hidden md:flex items-center w-full">
+                        <div class="flex items-center space-x-8">
+                            <a href="calender.html" class="text-white hover:text-yellow-400 transition-colors duration-200">Calendar</a>
+                            <a href="media.html" class="text-white hover:text-yellow-400 transition-colors duration-200">Media</a>
+                            <a href="products.html" class="text-white hover:text-yellow-400 transition-colors duration-200">Products</a>
+                        </div>
+                        <div class="ml-auto flex items-center">
+                            <h1 class="text-4xl font-bold p-2"><a href="index.html">Elihu S. Conant-Haque</a></h1>
+                        </div>
+                    </div>
+                </nav>
+            </header>
+            <main class="bg-blue-950 min-w-full">
+                <div class="w-full h-min[calc(100vh-4rem)] flex items-center justify-center bg-cover bg-center relative" style="background-image: url('./assets/images/Photo 1—2.jpeg'); min-height:calc(100vh - 4rem);">
+                    <!-- <h2 class="text-4xl md:text-6xl font-extrabold text-white text-center mt-4 drop-shadow-lg bg-black bg-opacity-40 px-6 py-4 rounded-t-lg">
+                        Performer and Composer
+                    </h2> -->
+
+                    <h2 class="absolute top-8 left-1/2 transform -translate-x-1/2 text-4xl md:text-6xl font-bold text-center bg-black bg-opacity-35 text-white text-opacity-90 px-6 md:px-8 py-3 md:py-4 rounded-lg z-50 mx-4 shadow-lg">
+                        Performer and Composer
+                    </h2>
+                    <div class="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-200 flex items-center justify-center z-10 cursor-pointer" onclick="document.getElementById('about-section').scrollIntoView({behavior: 'smooth'})">
+                        <svg
+                            xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 24 24"
+                            fill="currentColor"
+                            class="w-5 h-5 md:w-6 md:h-6 text-gray-700"
+                        >
+                            <path
+                                fill-rule="evenodd"
+                                d="M12 16.5a.75.75 0 01-.75-.75V6a.75.75 0 011.5 0v9.75a.75.75 0 01-.75.75zM5.22 9.72a.75.75 0 011.06 0L12 15.44l5.72-5.72a.75.75 0 111.06 1.06l-6.25 6.25a.75.75 0 01-1.06 0L5.22 10.78a.75.75 0 010-1.06z"
+                                clip-rule="evenodd"
+                            />
                         </svg>
-                        </button>
+                    </div> 
+                </div>
 
-                        <!-- Mobile Dropdown -->
-                        <div id="dropdown-menu" class="hidden absolute w-48 bg-black rounded-md shadow-lg z-20">
-                            <a href="calender.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Calendar</a>
-                            <a href="media.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Media</a>
-                            <a href="products.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Products</a>
+                <div id="about-section" class="w-full flex flex-col md:flex-row items-center justify-center p-4 md:p-8 text-white" style="min-height:calc(100vh - 4rem);">
+                    <img 
+                        src="assets/images/Photo 1—3.jpeg" 
+                        alt="photo_1-3"
+                        class="w-2/3 max-w-xs md:w-full md:max-w-[33vw] h-auto max-h-[80vh] object-cover rounded-lg mb-4 md:mb-0 md:mr-8 object-top mx-auto md:mx-0"
+                    />
+                    <h3 class="w-full md:w-1/3 flex items-center justify-center text-lg md:text-xl p-4 text-center">
+                        Elihu S. Conant-Haque is a classically trained tuba player and composer living in NYC. 
+                        He has won major solo competitions and been featured in a wide variety of music programs 
+                        such as TubaBach, MostlyModern, LongPlay, and New Colossus. His compositions have premiered 
+                        at major venues such as EMPAC and Zankel Hall, and often appear in contemporary film/multimedia projects. 
+                        Elihu's musical interests are diverse. He brings a bold non-traditional approach to the tuba, incorporating 
+                        styles from jazz bebop to Indonesian gamelan and championing the solo capabilities of the instrument.
+                    </h3>
+                </div>
+
+                <div id='quotes' class="container mx-auto px-4 md:px-8 py-8 text-white">
+                    <!-- quote 1 -->
+                    <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
+                        <div class="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0">
+                            <img src="./assets/images/Carlos Ágreda.png" alt="Carlos Ágreda" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full mb-2" loading="lazy">
+                            <p class="text-base md:text-lg mt-2">Carlos Ágreda</p>
+                        </div>
+                        <div class="w-full md:w-1/2 flex items-center justify-center">
+                            <p class="text-base md:text-lg text-center">
+                                Elihu has a rare talent; his technical facilities, his excellent musicality, 
+                                and especially his endless enthusiasm have influenced positively the entire brass section.
+                            </p>
                         </div>
                     </div>
-                    <div class="ml-auto">
-                        <h1 class="text-xl font-bold p-4"><a href="index.html">E S C-H</a></h1>
-                    </div>
-                </div>
 
-                <!-- Desktop: Menu left, h1 right -->
-                <div class="hidden md:flex items-center w-full">
-                    <div class="flex items-center space-x-8">
-                        <a href="calender.html" class="text-white hover:text-yellow-400 transition-colors duration-200">Calendar</a>
-                        <a href="media.html" class="text-white hover:text-yellow-400 transition-colors duration-200">Media</a>
-                        <a href="products.html" class="text-white hover:text-yellow-400 transition-colors duration-200">Products</a>
-                    </div>
-                    <div class="ml-auto flex items-center">
-                        <h1 class="text-4xl font-bold p-2"><a href="index.html">Elihu S. Conant-Haque</a></h1>
-                    </div>
-                </div>
-            </nav>
-        </header>
-        <main class="bg-blue-950 min-w-full">
-            <div class="w-full h-min[calc(100vh-4rem)] flex items-center justify-center bg-cover bg-center relative" style="background-image: url('assets/images/Photo\ 1—2.png'); min-height:calc(100vh - 4rem);">
-                <!-- <h2 class="text-4xl md:text-6xl font-extrabold text-white text-center mt-4 drop-shadow-lg bg-black bg-opacity-40 px-6 py-4 rounded-t-lg">
-                    Performer and Composer
-                </h2> -->
-
-                <h2 class="absolute top-8 left-1/2 transform -translate-x-1/2 text-4xl md:text-6xl font-bold text-center bg-black bg-opacity-35 text-white text-opacity-70 px-6 md:px-8 py-3 md:py-4 rounded-lg z-50 mx-4 shadow-lg">
-                    Performer and Composer
-                </h2>
-                <div class="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-200 flex items-center justify-center z-10 cursor-pointer" onclick="document.getElementById('about-section').scrollIntoView({behavior: 'smooth'})">
-                    <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        viewBox="0 0 24 24"
-                        fill="currentColor"
-                        class="w-5 h-5 md:w-6 md:h-6 text-gray-700"
-                    >
-                        <path
-                            fill-rule="evenodd"
-                            d="M12 16.5a.75.75 0 01-.75-.75V6a.75.75 0 011.5 0v9.75a.75.75 0 01-.75.75zM5.22 9.72a.75.75 0 011.06 0L12 15.44l5.72-5.72a.75.75 0 111.06 1.06l-6.25 6.25a.75.75 0 01-1.06 0L5.22 10.78a.75.75 0 010-1.06z"
-                            clip-rule="evenodd"
-                        />
-                    </svg>
-                </div> 
-            </div>
-
-            <div id="about-section" class="w-full flex flex-col md:flex-row items-center justify-center p-4 md:p-8 text-white" style="min-height:calc(100vh - 4rem);">
-                <img 
-                    src="assets/images/Photo 1—3.png" 
-                    alt="photo_1-3"
-                    class="w-2/3 max-w-xs md:w-full md:max-w-[33vw] h-auto max-h-[80vh] object-cover rounded-lg mb-4 md:mb-0 md:mr-8 object-top mx-auto md:mx-0"
-                />
-                <h3 class="w-full md:w-1/3 flex items-center justify-center text-lg md:text-3xl p-4 text-center">
-                    Hi Im Elihu, I am classically traind professinal god
-                </h3>
-            </div>
-
-            <div id='quotes' class="container mx-auto px-4 md:px-8 py-8 text-white">
-                <!-- quote 1 -->
-                <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
-                    <div class="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0">
-                        <img src="./assets/images/Carlos Ágreda.png" alt="Carlos Ágreda" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full mb-2" loading="lazy">
-                        <p class="text-base md:text-lg mt-2">Carlos Ágreda</p>
-                    </div>
-                    <div class="w-full md:w-1/2 flex items-center justify-center">
-                        <p class="text-base md:text-lg text-center">
-                            Elihu has a rare talent; his technical facilities, his excellent musicality, 
-                            and especially his endless enthusiasm have influenced positively the entire brass section.
-                        </p>
-                    </div>
-                </div>
-
-                <!-- quote2 -->
-                <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
-                    <div class="w-full md:w-1/2 flex items-center justify-center mb-4 md:mb-0 order-2 md:order-1">
-                        <p class="text-base md:text-lg text-center">
-                            Elihu has distinguished himself as a musician of remarkable sensitivity, intellectual curiosity, and 
-                            technical brilliance, as well as a collaborative and compassionate colleague. In short, I feel like 
-                            his musical potential is limitless.
-                        </p>
-                    </div>
-                    <div class="flex flex-col items-center w-full md:w-1/2 order-1 md:order-2">
-                        <img src="./assets/images/Christopher Fisher-Lochhead.png" alt="Christopher Fisher-Lochhead" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full mb-2" loading="lazy">
-                        <p class="text-base md:text-lg mt-2">Christopher Fisher-Lochhead</p>
-                    </div>
-                </div>
-
-                <!-- quote 3 -->
-                <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
-                    <div class="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0">
-                        <img src="./assets/images/Chrysi Nanou.png" alt="Chrysi Nanou" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full mb-2" loading="lazy">
-                        <p class="text-base md:text-lg mt-2">Chrysi Nanou</p>
-                    </div>
-                    <div class="w-full md:w-1/2 flex items-center justify-center">
-                        <p class="text-base md:text-lg text-center">
-                            Elihu is a very flexible musician; he is fluent and versatile in jazz, 
-                            all classical repertoire from baroque to contemporary, and classic rock.
-                        </p>
-                    </div>
-                </div>
-            </div>
-
-            <div id="videos" class="container mx-auto px-4 md:px-8 py-8 text-white">
-                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
-                    <div class="card w-full bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center">
-                        <div class="w-full aspect-video mb-4">
-                            <iframe class="w-full h-full rounded" src="https://www.youtube.com/embed/44PdExhi3cU?si=734ertLLGlcQkivC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                    <!-- quote2 -->
+                    <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
+                        <div class="w-full md:w-1/2 flex items-center justify-center mb-4 md:mb-0 order-2 md:order-1">
+                            <p class="text-base md:text-lg text-center">
+                                Elihu has distinguished himself as a musician of remarkable sensitivity, intellectual curiosity, and 
+                                technical brilliance, as well as a collaborative and compassionate colleague. In short, I feel like 
+                                his musical potential is limitless.
+                            </p>
                         </div>
-                        <h3 class="text-lg md:text-3xl p-2 text-center">Elihu Conant-Haque | "Carnival of Venice" by Jean-Baptiste Arban</h3>
-                    </div>
-
-                    <div class="card w-full bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center">
-                        <div class="w-full aspect-video mb-4">
-                            <iframe class="w-full h-full rounded" src="https://www.youtube.com/embed/l6GR-UgarRM?si=3p6uKw9_Doiv2BTS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        <div class="flex flex-col items-center w-full md:w-1/2 order-1 md:order-2">
+                            <img src="./assets/images/Christopher Fisher-Lochhead.png" alt="Christopher Fisher-Lochhead" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full mb-2" loading="lazy">
+                            <p class="text-base md:text-lg mt-2">Christopher Fisher-Lochhead</p>
                         </div>
-                        <h3 class="text-lg md:text-3xl p-2 text-center">Czardas - Tuba & Piano</h3>
                     </div>
-                </div>
-            </div>
 
-            <div class="form-container bg-gray-800 bg-opacity-90 p-4 md:p-8 lg:p-12 rounded-xl shadow-2xl max-w-sm md:max-w-md lg:max-w-lg w-11/12 mx-auto my-8" style="background-image: linear-gradient(to bottom, rgba(0,0,0,0.3) 0%, rgba(0,0,0,0.6) 50%, rgba(0,0,0,0.9) 100%), url('assets/images/Photo 1—7.png'); background-size: cover; background-position: center; background-repeat: no-repeat; min-height: 100vh; width: 100%; max-width: none; border-radius: 0;">
-                <!-- Logos Section -->
-                <div class="flex flex-col items-center mb-6 md:mb-8">
-                    <div class="flex justify-center space-x-2 md:space-x-4 mb-4">
-                        <img src="https://placehold.co/40x40/3498db/FFFFFF?text=Logo1" alt="Company Logo 1" class="logo rounded-full shadow-lg w-10 h-10 md:w-12 md:h-12" onerror="this.onerror=null;this.src='https://placehold.co/40x40/CCCCCC/000000?text=L1';">
-                        <img src="https://placehold.co/40x40/2ecc71/FFFFFF?text=Logo2" alt="Company Logo 2" class="logo rounded-full shadow-lg w-10 h-10 md:w-12 md:h-12" onerror="this.onerror=null;this.src='https://placehold.co/40x40/CCCCCC/000000?text=L2';">
-                    </div>
-                    <div class="flex justify-center space-x-2 md:space-x-4">
-                        <img src="https://placehold.co/40x40/e74c3c/FFFFFF?text=Logo3" alt="Company Logo 3" class="logo rounded-full shadow-lg w-10 h-10 md:w-12 md:h-12" onerror="this.onerror=null;this.src='https://placehold.co/40x40/CCCCCC/000000?text=L3';">
-                        <img src="https://placehold.co/40x40/f39c12/FFFFFF?text=Logo4" alt="Company Logo 4" class="logo rounded-full shadow-lg w-10 h-10 md:w-12 md:h-12" onerror="this.onerror=null;this.src='https://placehold.co/40x40/CCCCCC/000000?text=L4';">
+                    <!-- quote 3 -->
+                    <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
+                        <div class="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0">
+                            <img src="./assets/images/Chrysi Nanou.png" alt="Chrysi Nanou" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full mb-2" loading="lazy">
+                            <p class="text-base md:text-lg mt-2">Chrysi Nanou</p>
+                        </div>
+                        <div class="w-full md:w-1/2 flex items-center justify-center">
+                            <p class="text-base md:text-lg text-center">
+                                Elihu is a very flexible musician; he is fluent and versatile in jazz, 
+                                all classical repertoire from baroque to contemporary, and classic rock.
+                            </p>
+                        </div>
                     </div>
                 </div>
-        
-                <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-6 text-white">Direct Contact</h2>
-                <p class="text-center text-gray-400 mb-6 md:mb-8 text-sm md:text-base">We'd love to hear from you! Please fill out the form below.</p>
-        
-                <!-- Contact Form -->
-                <form action="mailto:elihu.conant-haque@example.com" method="GET" class="space-y-4 md:space-y-6 w-full md:w-3/4 lg:w-1/2 mx-auto">
-                    <div>
-                        <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name</label>
-                        <input type="text" id="name" name="name" placeholder="Your Name"
-                               class="mt-1 block w-full px-3 md:px-4 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400 text-sm transition-colors duration-200 ease-in-out hover:border-blue-400">
+
+                <div id="videos" class="container mx-auto px-4 md:px-8 py-8 text-white">
+                    <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-8">
+                        <div class="card w-full bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center">
+                            <div class="w-full aspect-video mb-4">
+                                <iframe class="w-full h-full rounded" src="https://www.youtube.com/embed/44PdExhi3cU?si=734ertLLGlcQkivC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <h3 class="text-lg md:text-3xl p-2 text-center">Elihu Conant-Haque | "Carnival of Venice" by Jean-Baptiste Arban</h3>
+                        </div>
+
+                        <div class="card w-full bg-gray-800 p-4 rounded-lg shadow-lg flex flex-col items-center">
+                            <div class="w-full aspect-video mb-4">
+                                <iframe class="w-full h-full rounded" src="https://www.youtube.com/embed/l6GR-UgarRM?si=3p6uKw9_Doiv2BTS" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                            </div>
+                            <h3 class="text-lg md:text-3xl p-2 text-center">Czardas - Tuba & Piano</h3>
+                        </div>
                     </div>
-        
-                    <div>
-                        <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
-                        <input type="email" id="email" name="email" placeholder="you@example.com"
-                               class="mt-1 block w-full px-3 md:px-4 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400 text-sm transition-colors duration-200 ease-in-out hover:border-blue-400">
+                </div>
+
+                <div id="lessons" class="container mx-auto px-4 md:px-8 py-8 text-white">
+                    <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Lessons</h2>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
+                        <!-- Image on the left -->
+                        <img src="./assets/images/Photo 1—5.jpeg" alt="lesson image" class="object-cover object-top w-2/3 h-full rounded-lg" />
+                        <!-- Card with text on the right -->
+                        <div class="card bg-gray-800 bg-opacity-80 rounded-lg shadow-lg p-6 flex flex-col justify-center">
+                            <p class="text-lg md:text-xl mb-4">
+                                Elihu offers lessons in instrumental technique (tuba/euphonium) and music theory (composing/arranging) 
+                                for the intermediate-to-advanced student. A course of study with Elihu is recommended for aspirational, 
+                                self-motivated young musicians who will take an active role in their learning. His teaching style is 
+                                systematic and conceptual; lessons involve more talking and less playing. Traditional exercises such as 
+                                Bordogni études are deemphasized. Instead, students are encouraged to seek out music that they want to 
+                                play, which promotes positive feelings about practicing. Schedule your free introductory lesson below!
+                            </p>
+                            <a class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded transition-colors duration-200 text-center mt-2 w-fit mx-auto" href="#">Schedule Now!</a>
+                        </div>
                     </div>
-        
-                    <div>
-                        <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
-                        <textarea id="message" name="message" rows="4" placeholder="Your message here..."
-                                  class="mt-1 block w-full px-3 md:px-4 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400 text-sm transition-colors duration-200 ease-in-out hover:border-blue-400 resize-y"></textarea>
+                </div>
+                <!-- Social & Contact Section with background image -->
+                <div class="relative flex flex-col items-center justify-center py-12 my-8 rounded-xl shadow-2xl overflow-hidden" style="min-height: 600px;">
+                    <!-- Section background image -->
+                    <img src="assets/images/Photo 1—7.png" alt="Section Background"
+                        class="absolute inset-0 w-full h-full object-cover z-0 opacity-60" />
+
+                    <!-- Section content (socials + contact) -->
+                    <div class="relative z-10 w-full max-w-2xl mx-auto px-4 background-white bg-opacity-10 backdrop-blur-md rounded-lg shadow-lg p-6">
+                        <!-- Logos Section -->
+                        <div class="flex flex-col items-center justify-center mb-6 md:mb-8 p-4 lg:rounded-lg mx-auto">
+                            <div class="flex justify-center space-x-2 md:space-x-4 mb-4">
+                                <img src="assets/images/logo/insta/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="instagram logo" class="logo w-24 max-h-16 object-contain" onclick="window.open('https://www.instagram.com/tuba_practicelog/')">
+                                <img src="assets/images/logo/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png" alt="youtube logo" class="logo w-24 max-h-16 object-contain" onclick="window.open('https://www.youtube.com/@ElihuConantHaque')">
+                            </div>
+                            <div class="flex justify-center space-x-2 md:space-x-4">
+                                <img src="assets/images/logo/Facebook/Primary Logo/Facebook_Logo_Primary.png" alt="facebook logo" class="logo w-24 max-h-16 object-contain" onclick="window.open('https://www.facebook.com/elihu.conanthaque')">
+                                <img src="assets/images/logo/SoundCloud/Stack Logo E5c47e.png" alt="soundcloud logo" class="logo w-24 max-h-16 object-contain" onclick="window.open('https://soundcloud.com/elihu-conant-haque')">
+                            </div>
+                        </div>
+                        <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-6 text-white">Direct Contact</h2>
+                        <!-- 
+                            Need to add backend logic to handle form submission
+                            can use SMTP.js for simple email sending
+                            Example: https://smtpjs.com/v3/smtp.js
+                            https://www.smtphosting.com
+                        -->
+                        <form id="contact-form" class="contact-form justify-center md:space-y-6 w-full md:w-3/4 lg:w-1/2 mx-auto">
+                            <div>
+                                <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name</label>
+                                <input type="text" id="name" name="name" placeholder="Your Name" required
+                                    class="mt-1 block w-full px-3 md:px-4 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400 text-sm transition-colors duration-200 ease-in-out hover:border-blue-400">
+                            </div>
+                            <div>
+                                <label for="email" class="block text-sm font-medium text-gray-300 mb-1">Email</label>
+                                <input type="email" id="email" name="email" placeholder="you@example.com" required
+                                    class="mt-1 block w-full px-3 md:px-4 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400 text-sm transition-colors duration-200 ease-in-out hover:border-blue-400">
+                            </div>
+                            <div>
+                                <label for="message" class="block text-sm font-medium text-gray-300 mb-1">Message</label>
+                                <textarea id="message" name="message" rows="4" placeholder="Your message here..." required
+                                        class="mt-1 block w-full px-3 md:px-4 py-2 bg-gray-700 border border-gray-600 rounded-md shadow-sm focus:ring-blue-500 focus:border-blue-500 text-white placeholder-gray-400 text-sm transition-colors duration-200 ease-in-out hover:border-blue-400 resize-y"></textarea>
+                            </div>
+                            <div class="flex justify-center">
+                                <button type="submit"
+                                        class="inline-flex justify-center py-2 md:py-3 px-4 md:px-6 border border-transparent shadow-sm text-sm md:text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 ease-in-out transform hover:scale-105">
+                                    Send Message
+                                </button>
+                            </div>
+                        </form>
                     </div>
-        
-                    <div class="flex justify-center">
-                        <button type="submit"
-                                class="inline-flex justify-center py-2 md:py-3 px-4 md:px-6 border border-transparent shadow-sm text-sm md:text-base font-medium rounded-md text-white bg-blue-600 hover:bg-blue-700 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-blue-500 transition-all duration-300 ease-in-out transform hover:scale-105">
-                            Send Message
-                        </button>
-                    </div>
-                </form>
-            </div>
-        </main>
-        <footer class="bg-black text-white text-center relative -mt-16 z-10 py-4">
-            <p class="text-sm md:text-base">2025 Elihu S. Conant-Haque</p>
-            <p class="text-xs md:text-sm text-gray-400">Designed and Built by Kazuki Neo</p>
-        </footer>
+                </div>
+            </main>
+            <footer class="bg-black text-white text-center relative -mt-16 z-10 py-4">
+                <p class="text-sm md:text-base">2025 Elihu S. Conant-Haque</p>
+                <p class="text-xs md:text-sm text-gray-400">Designed and Built by Kazuki Neo</p>
+            </footer>
+        </div>
     </body>
 </html>
