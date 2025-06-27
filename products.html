@@ -3,14 +3,14 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Products - Elihu Conant-Haque</title>
+        <title>Recordings - Elihu Conant-Haque</title>
         <link rel="stylesheet" href="style.css">
         <script src="./assets/script.js" defer></script>
 
         <!-- tailwind css -->
         <script src="https://cdn.tailwindcss.com"></script>
     </head>
-    <body class="flex flex-col min-h-screen">
+    <body>
         <header>
             <nav class="bg-black text-white shadow-lg w-full h-16 flex items-center justify-between px-4 relative">
                 <!-- Mobile: Menu button left, h1 right -->
@@ -27,7 +27,7 @@
 
                         <!-- Mobile Dropdown -->
                         <div id="dropdown-menu" class="hidden absolute w-48 bg-black rounded-md shadow-lg z-20">
-                            <a href="calender.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Calendar</a>
+                            <a href="index.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Home</a>
                             <a href="media.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Media</a>
                             <a href="products.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Products</a>
                         </div>
@@ -40,7 +40,7 @@
                 <!-- Desktop: Menu left, h1 right -->
                 <div class="hidden md:flex items-center w-full">
                     <div class="flex items-center space-x-8">
-                        <a href="calender.html" class="text-white hover:text-yellow-400 transition-colors duration-200">Calendar</a>
+                        <a href="index.html" class="text-white hover:text-yellow-400 transition-colors duration-200">Home</a>
                         <a href="media.html" class="text-white hover:text-yellow-400 transition-colors duration-200">Media</a>
                         <a href="products.html" class="text-white hover:text-yellow-400 transition-colors duration-200">Products</a>
                     </div>
@@ -50,14 +50,100 @@
                 </div>
             </nav>
         </header>
-        <main class="flex-1 w-full px-4 sm:px-6 lg:px-8 py-12 mx-auto bg-blue-950">
-            <h1 class="text-4xl font-bold text-white mb-12 text-center">Products</h1>
-            <div id="products-grid" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8"></div>
+        <main class="w-screen bg-slate-900">
+            <!-- <div class="w-full h-[calc(100vh-8rem)] relative bg-cover bg-center bg-gradient-to-white"
+                 style=" background-image: linear-gradient(
+                    to bottom, transparent, white
+                  ),url('assets/images/products/Photo 2—20.jpg');"> -->
+            <div class="w-full h-[calc(100vh-8rem)] flex flex-col items-center justify-center bg-cover bg-center relative"
+                 style="background-image: linear-gradient(to bottom, transparent, white), url('assets/images/products/Photo 2—20.jpg');">
+                
+                
+
+<!-- bh=[url('assets/images/products/Photo 2—20.jpg')] -->
+                <!-- Text overlay -->
+                <p class="absolute bottom-16 left-1/2 transform -translate-x-1/2 text-black text-center bg-gray-300 bg-opacity-80 p-4 w-1/2 rounded shadow-lg z-10">
+                    In collaboration with Mr. Eason Zhang and the Crown Musical Instrument Factory,
+                    Elihu has developed an exclusive line of tubas and euphoniums. These are premium-quality
+                    instruments made-to-order by Mr. Zhang and his small team. Critical components such as valves
+                    and linkages were designed with the help of B-Brass in Fiumicino, Italy. After being play-tested
+                    by Elihu, each horn is cleaned and adjusted by Jon Baltimore, New York City's most trusted
+                    woodwind-brasswind technician. Instruments are available for play-testing in the Lower East 
+                    Side of Manhattan. Get in touch to try these excellent instruments for yourself!
+                </p>
+            </div>
+            <div class="grid grid-cols-3 gap-8 w-screen mx-auto bg-white py-8">
+                <div class="card p-4 flex flex-col ">
+                    <img src="assets/images/products/Products_ Main Images/Product 1 Photo 1.jpg" class="w-full object-cover rounded"/>
+                    <h2 class="text-2xl text-black mt-4">Tuba</h2>
+                </div>
+                <div class="card p-4 flex flex-col items-center">
+                    <img src="assets/images/products/Products_ Main Images/Product 2 Photo 2.jpg" class="w-full object-cover rounded"/>
+                    <h2 class="text-2xl text-black mt-4">Tuba</h2>
+                </div>
+                <div class="card p-4 flex flex-col items-center">
+                    <img src="assets/images/products/Products_ Main Images/Product 3 Photo 1.jpg" class="w-full object-cover rounded"/>
+                    <h2 class="text-2xl text-black mt-4">Tuba</h2>
+                </div>
+
+                <div class="card p-4 flex flex-col items-center">
+                    <img src="assets/images/products/Products_ Main Images/Product 2 Photo 2.jpg" class="w-full object-cover rounded"/>
+                    <h2 class="text-2xl text-black mt-4">Tuba</h2>
+                </div>
+                <div class="card p-4 flex flex-col items-center">
+                    <img src="assets/images/products/Products_ Main Images/Product 3 Photo 1.jpg" class="w-full object-cover rounded"/>
+                    <h2 class="text-2xl text-black mt-4">Tuba</h2>
+                </div>
+            </div>
+            <!-- <div class="bg-gradient-to-b from-white to-slate-900 w-full h-16 flex items-center justify-center">
+            </div> -->
+            <div class="w-full h-screen flex flex-col items-center justify-center gap-8 bg-gradient-to-b from-white to-slate-900">
+                <!-- Text Row -->
+                <p class="text-lg md:text-6xl font-bold text-center bg-white bg-opacity-35 text-white px-4 md:px-8 py-3 md:py-4 rounded-lg z-50 mx-4 shadow-lg">
+                    Eason Zhang and the Crown Instrument Factory
+                </p>
+                <!-- Carousel Row -->
+                <div class="carousel-container relative w-[800px] h-[400px] overflow-hidden border border-gray-300 shadow-md bg-blue-300 flex justify-center items-center">
+                    <div class="carousel-track absolute flex h-full">
+                        <div class="carousel-slide flex flex-col justify-center items-center p-5 bg-white bg-opacity-80 border border-gray-200 box-border min-w-[400px] relative">
+                            <img src="assets/images/products/Photo 2—13.jpg" alt="Photo 2-13" class="max-w-full max-h-4/5 object-contain">
+                            <span class="slide-number absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white px-2.5 py-1 rounded text-sm">2-13</span>
+                        </div>
+                        <div class="carousel-slide flex flex-col justify-center items-center p-5 bg-white bg-opacity-80 border border-gray-200 box-border min-w-[400px] relative">
+                            <img src="assets/images/products/Photo 2—19.jpg" alt="Photo 2-19" class="max-w-full max-h-4/5 object-contain">
+                            <span class="slide-number absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white px-2.5 py-1 rounded text-sm">2-19</span>
+                        </div>
+                        <div class="carousel-slide flex flex-col justify-center items-center p-5 bg-white bg-opacity-80 border border-gray-200 box-border min-w-[400px] relative">
+                            <img src="assets/images/products/Photo 2—2.jpg" alt="Photo 2-2" class="max-w-full max-h-4/5 object-contain">
+                            <!-- <span class="slide-number absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white px-2.5 py-1 rounded text-sm">2-2</span> -->
+                        </div>
+                        <div class="carousel-slide current-slide flex flex-col justify-center items-center p-5 bg-white border border-gray-200 box-border min-w-[500px] relative shadow-lg">
+                            <img src="assets/images/products/Photo 2—21.png" alt="Photo 2-21" class="max-w-full max-h-4/5 object-contain">
+                            <span class="slide-number absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white px-2.5 py-1 rounded text-sm">2-21</span>
+                        </div>
+                        
+                        <div class="carousel-slide flex flex-col justify-center items-center p-5 bg-white bg-opacity-80 border border-gray-200 box-border min-w-[400px] relative">
+                            <img src="assets/images/products/Photo 2—7.jpg" alt="Photo 2-7" class="max-w-full max-h-4/5 object-contain">
+                            <span class="slide-number absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white px-2.5 py-1 rounded text-sm">2-7</span>
+                        </div>
+                        <div class="carousel-slide flex flex-col justify-center items-center p-5 bg-white bg-opacity-80 border border-gray-200 box-border min-w-[400px] relative">
+                            <img src="assets/images/products/Photo 2—8.jpg" alt="Photo 2-8" class="max-w-full max-h-4/5 object-contain">
+                            <span class="slide-number absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white px-2.5 py-1 rounded text-sm">2-8</span>
+                        </div>
+                        <div class="carousel-slide flex flex-col justify-center items-center p-5 bg-white bg-opacity-80 border border-gray-200 box-border min-w-[400px] relative">
+                            <img src="assets/images/products/Photo 2—1.jpg" alt="Photo 2-1" class="max-w-full max-h-4/5 object-contain">
+                            <span class="slide-number absolute bottom-2 left-1/2 -translate-x-1/2 bg-black bg-opacity-50 text-white px-2.5 py-1 rounded text-sm">2-1</span>
+                        </div>
+                    </div>
+
+                    <button class="carousel-button prev absolute top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white border-none p-4 cursor-pointer text-4xl z-30 rounded hover:bg-opacity-80 left-2">&#10094;</button>
+                    <button class="carousel-button next absolute top-1/2 -translate-y-1/2 bg-black bg-opacity-50 text-white border-none p-4 cursor-pointer text-4xl z-30 rounded hover:bg-opacity-80 right-2">&#10095;</button>
+                </div>
         </main>
-        <footer class="bg-black text-white text-center relative z-10 py-4">
-            <p class="text-sm md:text-base">&copy; 2025 Elihu S. Conant-Haque</p>
+        <footer class="bg-black text-white text-center py-4">
+            <p class="text-sm md:text-base">2025 Elihu S. Conant-Haque</p>
             <p class="text-xs md:text-sm text-gray-400">Designed and Built by Kazuki Neo</p>
         </footer>
-        <script src="assets/products.js"></script>
+        
     </body>
 </html>
