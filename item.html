@@ -20,7 +20,7 @@
         <!-- script -->
         <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
     </head>
-    <body class="flex flex-col min-h-screen">
+    <body class="flex flex-col min-h-screen bg-slate-900">
         <header>
             <nav class="bg-black text-white shadow-lg w-full h-16 flex items-center justify-between px-4 relative">
                 <!-- Mobile: Menu button left, h1 right -->
@@ -60,82 +60,77 @@
                 </div>
             </nav>
         </header>
-        <main class="flex-1 w-screen h-screen bg-slate-900 text-white">
-            <div class="w-full h-full p-4 lg:p-8 flex flex-row flex-grow-0 gap-8">
-                <div class="w-2/3 flex flex-row gap-4">
-                    <div id="thumbnail-gallery" class="flex flex-col gap-2 h-full overflow-y-none"></div>
+        <main class="flex-1 w-full bg-slate-900 text-white flex items-center justify-center">
+            <div class="w-full max-w-7xl p-4 lg:p-8 flex flex-col gap-8">
+                <div class="flex flex-row gap-8">
+                    <div class="w-2/3 flex flex-col gap-4">
+                        <div class="flex flex-row gap-4">
+                            <div id="thumbnail-gallery" class="flex flex-col gap-2 h-full overflow-y-auto"></div>
+
+                            <div class="flex-grow bg-gray-800 rounded-lg shadow-lg p-2 flex items-center justify-center relative w-full h-[500px] max-w-[600px] overflow-hidden">
+                                <img id="main-product-image" src="https://via.placeholder.com/800x600/374151/ffffff?text=Main+Product+Image" alt="Main Product Image" class="w-full h-full object-contain rounded transition-transform duration-300 flex-grow-0">
+                            </div>
+                        </div>
+
+                        <div class="bg-gray-800 rounded-lg shadow-lg p-6">
+                            <h3 class="text-lg font-semibold text-white mb-2">Description</h3>
+                            <p class="text-gray-300 text-sm leading-relaxed" id="product-description">
+                                This is a high-quality tuba instrument perfect for professional musicians and serious students. Features excellent craftsmanship and superior sound quality.
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="w-1/3 bg-gray-800 rounded-lg shadow-lg p-6">
+                        <h1 class="text-2xl font-semibold mb-2 leading-tight text-white" id="product-name">Tuba Brand New</h1>
     
-                    <div class="flex-grow bg-gray-800 rounded-lg shadow-lg p-2 flex items-center justify-center relative w-full h-max-2/3 min-w-[600px] overflow-hidden">
-                        <img id="main-product-image" src="https://via.placeholder.com/800x600/374151/ffffff?text=Main+Product+Image" alt="Main Product Image" class="w-full h-full object-contain rounded transition-transform duration-300 flex-grow-0">
+                        <div class="mb-4">
+                            <span class="text-3xl font-bold text-red-400 mr-2" id="product-price">$3,449.99</span>
+                            <span class="text-gray-300 text-sm">or Best Offer</span>
+                        </div>
+    
+                        <div class="flex items-center mb-4 text-sm">
+                            <span class="font-semibold mr-2 text-gray-300">Condition:</span>
+                            <span class="text-white" id="product-condition">New</span>
+                            <i class="fas fa-info-circle text-gray-400 ml-1 cursor-pointer" title="Brand new, unused, unopened, undamaged item in its original packaging."></i>
+                        </div>
+                        <div class="flex flex-col gap-3 mb-6">
+                            <button class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-blue-700 transition-colors shadow" id="buy_now">
+                                Buy It Now
+                            </button>
+                            <button class="bg-gray-700 text-white border border-gray-600 font-semibold py-3 px-6 rounded-lg text-lg hover:bg-gray-600 transition-colors" id="add_cart">
+                                Add to cart
+                            </button>
+                            <button class="bg-gray-800 text-white border border-gray-600 font-semibold py-3 px-6 rounded-lg text-lg hover:bg-gray-700 transition-colors" id="make_offer">
+                                Make offer
+                            </button>
+                            <button class="bg-gray-800 text-white border border-gray-600 font-semibold py-3 px-6 rounded-lg text-lg flex items-center justify-center gap-2 hover:bg-gray-700 transition-colors">
+                                <i class="far fa-heart"></i> Add to Watchlist
+                            </button>
+                        </div>
+    
+                        <hr class="my-6 border-gray-600">
+    
+                        <div class="mb-4">
+                            <div class="flex justify-between items-center mb-2">
+                                <span class="text-sm font-semibold text-gray-300">Shipping:</span>
+                                <p class="text-sm text-gray-300">
+                                    <span class="font-bold" id="shipping">Free Expedited Shipping</span>
+                                </p>
+                            </div>
+                            <p class="text-xs text-gray-400 ml-auto pl-[5rem] lg:pl-[4.5rem]">
+                                International shipment of items may be subject to customs processing and additional charges.
+                                <i class="fas fa-info-circle ml-1 cursor-pointer" title="Buyers are responsible for customs duties and fees levied by their country."></i>
+                            </p>
+                        </div>
+    
+                        <div class="flex justify-between items-center mb-4">
+                            <span class="text-sm font-semibold text-gray-300">Returns:</span>
+                            <p class="text-sm text-gray-300">
+                                Seller does not accept returns. <a href="#" class="text-blue-400 hover:underline">See details</a>
+                            </p>
+                        </div>
                     </div>
                 </div>
-    
-                <div class="w-1/3 bg-gray-800 rounded-lg shadow-lg p-6">
-    
-                    <h1 class="text-2xl font-semibold mb-2 leading-tight text-white" id="product-name">Tuba Brand New</h1>
-    
-                    <div class="mb-4">
-                        <span class="text-3xl font-bold text-red-400 mr-2" id="product-price">$3,449.99</span>
-                        <span class="text-gray-300 text-sm">or Best Offer</span>
-                    </div>
-    
-                    <div class="flex items-center mb-4 text-sm">
-                        <span class="font-semibold mr-2 text-gray-300">Condition:</span>
-                        <span class="text-white" id="product-condition">New</span>
-                        <i class="fas fa-info-circle text-gray-400 ml-1 cursor-pointer" title="Brand new, unused, unopened, undamaged item in its original packaging."></i>
-                    </div>
-                    <div class="mb-4">
-                        <h3 class="text-lg font-semibold text-white mb-2">Description</h3>
-                        <p class="text-gray-300 text-sm leading-relaxed" id="product-description">
-                            This is a high-quality tuba instrument perfect for professional musicians and serious students. Features excellent craftsmanship and superior sound quality.
-                        </p>
-                    </div>
-                    <div class="flex flex-col gap-3 mb-6">
-                        <button class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-blue-700 transition-colors shadow" id="buy_now">
-                            Buy It Now
-                        </button>
-                        <button class="bg-gray-700 text-white border border-gray-600 font-semibold py-3 px-6 rounded-lg text-lg hover:bg-gray-600 transition-colors" id="add_cart">
-                            Add to cart
-                        </button>
-                        <button class="bg-gray-800 text-white border border-gray-600 font-semibold py-3 px-6 rounded-lg text-lg hover:bg-gray-700 transition-colors" id="make_offer">
-                            Make offer
-                        </button>
-                        <button class="bg-gray-800 text-white border border-gray-600 font-semibold py-3 px-6 rounded-lg text-lg flex items-center justify-center gap-2 hover:bg-gray-700 transition-colors">
-                            <i class="far fa-heart"></i> Add to Watchlist
-                        </button>
-                    </div>
-    
-                    <hr class="my-6 border-gray-600">
-    
-                    <div class="mb-4">
-                        <div class="flex justify-between items-center mb-2">
-                            <span class="text-sm font-semibold text-gray-300">Shipping:</span>
-                            <p class="text-sm text-gray-300">
-                                <span class="font-bold" id="shipping">Free Expedited Shipping</span>
-                            </p>
-                        </div>
-                        <p class="text-xs text-gray-400 ml-auto pl-[5rem] lg:pl-[4.5rem]">
-                            International shipment of items may be subject to customs processing and additional charges.
-                            <i class="fas fa-info-circle ml-1 cursor-pointer" title="Buyers are responsible for customs duties and fees levied by their country."></i>
-                        </p>
-                    </div>
-    
-                    <!-- <div class="mb-4">
-                        <div class="flex justify-between items-center">
-                            <span class="text-sm font-semibold text-gray-300">Delivery:</span>
-                            <p class="text-sm text-gray-300">
-                                Estimated between <span class="font-bold">Tue, Jul 1 and Mon, Jul 14</span> to <span class="font-bold">12869</span>
-                                <i class="fas fa-question-circle text-gray-400 ml-1 cursor-pointer" title="Estimated delivery date based on seller's handling time, shipping service selected, and receipt of cleared payment. Delivery times may vary, especially during peak periods."></i>
-                            </p>
-                        </div>
-                    </div> -->
-    
-                    <div class="flex justify-between items-center mb-4">
-                        <span class="text-sm font-semibold text-gray-300">Returns:</span>
-                        <p class="text-sm text-gray-300">
-                            Seller does not accept returns. <a href="#" class="text-blue-400 hover:underline">See details</a>
-                        </p>
-                    </div>
             </div>
         </main>
         <footer class="bg-black text-white text-center py-4">
