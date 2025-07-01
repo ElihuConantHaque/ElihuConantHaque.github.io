@@ -1,0 +1,22 @@
+[
+    {
+        "title": "Tuba",
+        "images": [
+            "assets/images/products/Products_ Main Images/Product 1 Photo 1.jpg",
+            "assets/images/products/Products_ Main Images/Product 2 Photo 2.jpg",
+            "assets/images/products/Products_ Main Images/Product 3 Photo 1.jpg"
+        ],
+        "description": "A beautiful tuba recording. High quality, professionally mastered.",
+        "price": 19.99,
+        "stripeLink": "https://buy.stripe.com/test_28EaEX3Dr0as7NEbWh5wI02"
+    },
+    {
+        "title": "Machine",
+        "images": [
+            "assets/images/products/Photo 2—2.jpg"
+        ],
+        "description": "Euphonium solo album with a variety of styles.",
+        "price": 15.99,
+        "stripeLink": "https://buy.stripe.com/test_1234567890abcdef"
+    }
+]

@@ -23,4 +23,25 @@ document.addEventListener('DOMContentLoaded', () => {
         `;
       });
     });
-}); 
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  fetch('assets/items.json')
+    .then(response => response.json())
+    .then(products => {
+      const grid = document.getElementById('products');
+      grid.innerHTML = '';
+      products.forEach((product, idx) => {
+        grid.innerHTML += `
+          <a href="item.html?id=${idx}" class="card p-4 flex flex-col h-full items-center bg-white rounded shadow hover:shadow-lg transition-shadow duration-200">
+              <div class="w-full h-64 flex items-center justify-center">
+                  <img src="${product.images[0]}" class="object-contain h-full w-full rounded" />
+              </div>
+              <h2 class="text-2xl text-black mt-4 text-center">${product.title}</h2>
+              <p class="text-gray-600 mt-2 text-center">${product.description}</p>
+              <span class="text-lg text-black font-bold mt-2">$${product.price.toFixed(2)}</span>
+          </a>
+        `;
+      });
+    });
+});
