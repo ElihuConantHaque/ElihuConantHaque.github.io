@@ -7,11 +7,38 @@
         
         <!-- <link rel="stylesheet" href="style.css"> -->
         <script src="./assets/script.js" defer></script>
+        <script src="./assets/contact.js" defer></script>
+        <script src="https://smtpjs.com/v3/smtp.js" defer></script>
+        <script type="text/javascript" src="https://cdn.appointy.com/web/blob-web/js/appointy-widget.js" defer></script>
+
+        <script defer type="text/javascript">
+            if (typeof(window.Appointy) === 'undefined') {
+                window.Appointy = {};
+            }
+            window.Appointy.config = {
+                business: 'ElihuMusic',
+                defaultTab: 'Schedule',
+                extraParameter: '',
+                buttonImg: '',
+                modal: {
+                    height: '100%',
+                    width: '100%'
+                },
+                // buttonAlign: "Right", /* You may set 'Left' or 'Right', default value is 'Right'*/
+                // buttonPosition: "40", /*You may set 'Top', 'Bottom' or any number from 0 to 100, default value is '40'*/
+            };
+            jQuery(document).ready(function() {
+                jQuery("#bookAppointy").click(function(){
+                    jQuery("#app-widget-btn").click();
+                    return false;
+                });
+            });
+        </script>
 
         <!-- tailwind css -->
         <script src="https://cdn.tailwindcss.com"></script>
         
-        <script src="https://smtpjs.com/v3/smtp.js" defer></script>
+        
     </head>
     <!-- <body class="bg-gray-50 min-h-screen flex flex-col"> -->
     <body class="flex flex-col min-h-screen">
@@ -129,7 +156,7 @@
                     <!-- quote 3 -->
                     <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
                         <div class="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0">
-                            <img src="./assets/images/quotes/Nanou.png" alt="Chrysi Nanou" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full mb-2" loading="lazy">
+                            <img src="./assets/images/quotes/Chrysi Nanou.png" alt="Chrysi Nanou" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full mb-2" loading="lazy">
                             <p class="text-base md:text-lg mt-2">Chrysi Nanou</p>
                         </div>
                         <div class="w-full md:w-1/2 flex items-center justify-center">
@@ -174,40 +201,18 @@
                                 Bordogni études are deemphasized. Instead, students are encouraged to seek out music that they want to 
                                 play, which promotes positive feelings about practicing. Schedule your free introductory lesson below!
                             </p>
-                            <button id="bookAppointy" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded transition-colors duration-200 text-center mt-2 w-fit mx-auto">Schedule Now!</button>
-                            <script type="text/javascript">
-                                if (typeof(window.Appointy) === 'undefined') {
-                                    window.Appointy = {};
-                                }
-                                window.Appointy.config = {
-                                    business: 'ElihuMusic',
-                                    defaultTab: 'Schedule',
-                                    extraParameter: '',
-                                    buttonImg: '',
-                                    modal: {
-                                        height: '100%',
-                                        width: '100%'
-                                    },
-                                    // buttonAlign: "Right", /* You may set 'Left' or 'Right', default value is 'Right'*/
-                                    // buttonPosition: "40", /*You may set 'Top', 'Bottom' or any number from 0 to 100, default value is '40'*/
-                                };
-                                jQuery(document).ready(function() {
-                                    jQuery("#bookAppointy").click(function(){
-                                        jQuery("#app-widget-btn").click();
-                                        return false;
-                                    });
-                                });
-                            </script>
-                            <script type="text/javascript" src="https://cdn.appointy.com/web/blob-web/js/appointy-widget.js"></script>
+                            <button id="bookAppointy" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded transition-colors duration-200 text-center mt-2 w-fit mx-auto cursor-pointer" onclick="scheduleAppointment()">Schedule Now!</button>
+                                                        
 
                         </div>
                     </div>
                 </div>
                 <!-- Social & Contact Section with background image -->
-                <div class="relative flex flex-col items-center justify-center py-12 my-8 rounded-xl shadow-2xl overflow-hidden" style="min-height: 600px;">
+                <div class="w-full h-[calc(100vh-6rem)] flex flex-col items-center justify-center bg-cover bg-center relative" 
+                    style="background-image: url('./assets/images/Photo 1—7.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                     <!-- Section background image -->
-                    <img src="assets/images/Photo 1—7.png" alt="Section Background"
-                        class="absolute inset-0 w-full h-full object-cover z-0 opacity-60" />
+                    <!-- <img src="assets/images/Photo 1—7.png" alt="Section Background"
+                        class="absolute inset-0 w-full h-full object-cover z-0 opacity-60" /> -->
 
                     <!-- Section content (socials + contact) -->
                     <div class="relative z-10 w-full max-w-2xl mx-auto px-4 background-white bg-opacity-10 backdrop-blur-md rounded-lg shadow-lg p-6">
@@ -215,11 +220,11 @@
                         <div class="flex flex-col items-center justify-center mb-6 md:mb-8 p-4 lg:rounded-lg mx-auto">
                             <div class="flex justify-center space-x-2 md:space-x-4 mb-4">
                                 <img src="assets/images/logo/insta/01 Gradient Glyph/Instagram_Glyph_Gradient.png" alt="instagram logo" class="logo w-24 max-h-16 object-contain" onclick="window.open('https://www.instagram.com/tuba_practicelog/')">
-                                <img src="assets/images/logo/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png" alt="youtube logo" class="logo w-24 max-h-16 object-contain" onclick="window.open('https://www.youtube.com/@ElihuConantHaque')">
+                                <img src="assets/images/logo/youtube_full_color_icon/digital_and_tv/yt_icon_rgb.png" alt="youtube logo" class="logo w-24 max-h-16 object-contain" onclick="window.open('https://www.youtube.com/@elihu_music')">
                             </div>
                             <div class="flex justify-center space-x-2 md:space-x-4">
-                                <img src="assets/images/logo/Facebook/Primary Logo/Facebook_Logo_Primary.png" alt="facebook logo" class="logo w-24 max-h-16 object-contain" onclick="window.open('https://www.facebook.com/elihu.conanthaque')">
-                                <img src="assets/images/logo/SoundCloud/Stack Logo E5c47e.png" alt="soundcloud logo" class="logo w-24 max-h-16 object-contain" onclick="window.open('https://soundcloud.com/elihu-conant-haque')">
+                                <img src="assets/images/logo/Facebook/Primary Logo/Facebook_Logo_Primary.png" alt="facebook logo" class="logo w-24 max-h-16 object-contain" onclick="window.open('https://www.facebook.com/profile.php?id=61577303115715')">
+                                <img src="assets/images/logo/SoundCloud/Stack Logo E5c47e.png" alt="soundcloud logo" class="logo w-24 max-h-16 object-contain" onclick="window.open('https://soundcloud.com/elihu-333413621')">
                             </div>
                         </div>
                         <h2 class="text-2xl md:text-3xl font-bold text-center mb-4 md:mb-6 text-white">Direct Contact</h2>
@@ -229,7 +234,7 @@
                             Example: https://smtpjs.com/v3/smtp.js
                             https://www.smtphosting.com
                         -->
-                        <form id="contact-form" class="contact-form justify-center md:space-y-6 w-full md:w-3/4 lg:w-1/2 mx-auto">
+                        <form id="contact-form" class="contact-form justify-center md:space-y-6 w-full md:w-3/4 lg:w-1/2 mx-auto" onsubmit="sendEmail(); return false;">
                             <div>
                                 <label for="name" class="block text-sm font-medium text-gray-300 mb-1">Name</label>
                                 <input type="text" id="name" name="name" placeholder="Your Name" required

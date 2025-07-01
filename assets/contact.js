@@ -16,7 +16,13 @@ function sendEmail() {
         From : email,
         Subject : "Website direct contact from "+name,
         Body :  message
+
+        // pass
     }).then(
         message => alert(message)
+    ).catch(
+        error => alert("Failed to send email: " + error)
     );
+    document.getElementById("contact-form").reset();
+    return false; 
 }
