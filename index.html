@@ -9,9 +9,8 @@
         <script src="./assets/script.js" defer></script>
         <script src="./assets/contact.js" defer></script>
         <script src="https://smtpjs.com/v3/smtp.js" defer></script>
-        <script type="text/javascript" src="https://cdn.appointy.com/web/blob-web/js/appointy-widget.js" defer></script>
 
-        <script defer type="text/javascript">
+        <script type="text/javascript" defer>
             if (typeof(window.Appointy) === 'undefined') {
                 window.Appointy = {};
             }
@@ -24,8 +23,8 @@
                     height: '100%',
                     width: '100%'
                 },
-                // buttonAlign: "Right", /* You may set 'Left' or 'Right', default value is 'Right'*/
-                // buttonPosition: "40", /*You may set 'Top', 'Bottom' or any number from 0 to 100, default value is '40'*/
+                buttonAlign: "Right", /* You may set 'Left' or 'Right', default value is 'Right'*/
+                buttonPosition: "40", /*You may set 'Top', 'Bottom' or any number from 0 to 100, default value is '40'*/
             };
             jQuery(document).ready(function() {
                 jQuery("#bookAppointy").click(function(){
@@ -34,9 +33,29 @@
                 });
             });
         </script>
+        <script type="text/javascript" src="https://cdn.appointy.com/web/blob-web/js/appointy-widget.js"></script>
+
 
         <!-- tailwind css -->
         <script src="https://cdn.tailwindcss.com"></script>
+
+        <!-- Meta Pixel Code -->
+        <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '755091480186638');
+            fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=755091480186638&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
         
         
     </head>
@@ -72,7 +91,7 @@
                     <!-- Desktop: Menu left, h1 right -->
                     <div class="hidden md:flex items-center w-full">
                         <div class="flex items-center space-x-8">
-                            <a href="index.html" class="text-white hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Home</a>
+                            <a href="index.html" class="text-black bg-white hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Home</a>
                             <a href="media.html" class="text-white hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Media</a>
                             <a href="products.html" class="text-white hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Products</a>
                         </div>
@@ -190,7 +209,7 @@
                     <h2 class="text-3xl md:text-4xl font-bold text-center mb-6">Lessons</h2>
                     <div class="grid grid-cols-1 md:grid-cols-2 gap-8 items-center">
                         <!-- Image on the left -->
-                        <img src="./assets/images/Photo 1—5.jpeg" alt="lesson image" class="object-cover object-top w-2/3 h-full rounded-lg" />
+                        <img src="./assets/images/Photo 1—5.jpeg" alt="lesson image" class="object-cover object-top w-full h-full rounded-lg" />
                         <!-- Card with text on the right -->
                         <div class="card bg-gray-800 bg-opacity-80 rounded-lg shadow-lg p-6 flex flex-col justify-center">
                             <p class="text-lg md:text-xl mb-4">
@@ -201,8 +220,55 @@
                                 Bordogni études are deemphasized. Instead, students are encouraged to seek out music that they want to 
                                 play, which promotes positive feelings about practicing. Schedule your free introductory lesson below!
                             </p>
-                            <button id="bookAppointy" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded transition-colors duration-200 text-center mt-2 w-fit mx-auto cursor-pointer" onclick="scheduleAppointment()">Schedule Now!</button>
-                                                        
+                            <!-- button -->
+                            <button id="bookAppointy" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded transition-colors duration-200 text-center mt-2 w-fit mx-auto cursor-pointer" onclick="window.open('https://booking.appointy.com/ElihuMusic')">Schedule Now!</button>
+                            <!-- <a href="https://booking.appointy.com/ElihuMusic" target="_blank"><img src="https://appointy.com/Images/scheduleme.png" alt="" border="0" /></a> -->
+
+
+                            
+
+                            <!-- <script type="text/javascript">
+                                if (typeof(window.Appointy) === 'undefined') {
+                                    window.Appointy = {};
+                                }
+                                window.Appointy.config = {
+                                    business: 'ElihuMusic',
+                                    defaultTab: 'Schedule',
+                                    extraParameter: '',
+                                    buttonImg: '',
+                                    modal: {
+                                        height: '100%',
+                                        width: '100%'
+                                    },
+                                    buttonAlign: "Right", /* You may set 'Left' or 'Right', default value is 'Right'*/
+                                    buttonPosition: "40", /*You may set 'Top', 'Bottom' or any number from 0 to 100, default value is '40'*/
+                                };
+                                jQuery(document).ready(function() {
+                                    jQuery("#bookAppointy").click(function(){
+                                        jQuery("#app-widget-btn").click();
+                                        return false;
+                                    });
+                                });
+                            </script>
+                            <script type="text/javascript" src="https://cdn.appointy.com/web/blob-web/js/appointy-widget.js"></script> -->
+
+
+                            <!-- Widget -->
+                            <!-- <iframe id="appointy-iframe" class="no-border" src="https://booking.appointy.com/ElihuMusic?isgadget=1&autoheight=1"  scrolling="no" width="100%" frameBorder="0"></iframe>
+                            <script>
+                                (function() {
+                                    const ifrm = document.getElementById("appointy-iframe");
+                                    window.addEventListener("message", function (e) {
+                                        const d = e.data || {};
+                                        if (d.type === "height"){
+                                            ifrm.style.height = d.data + "px";
+                                        }
+                                        if (d.type === "scroll") {
+                                            ifrm.scrollIntoView();
+                                        }
+                                    });
+                                })();
+                            </script> -->
 
                         </div>
                     </div>
@@ -211,8 +277,6 @@
                 <div class="w-full h-[calc(100vh-6rem)] flex flex-col items-center justify-center bg-cover bg-center relative" 
                     style="background-image: url('./assets/images/Photo 1—7.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                     <!-- Section background image -->
-                    <!-- <img src="assets/images/Photo 1—7.png" alt="Section Background"
-                        class="absolute inset-0 w-full h-full object-cover z-0 opacity-60" /> -->
 
                     <!-- Section content (socials + contact) -->
                     <div class="relative z-10 w-full max-w-2xl mx-auto px-4 background-white bg-opacity-10 backdrop-blur-md rounded-lg shadow-lg p-6">

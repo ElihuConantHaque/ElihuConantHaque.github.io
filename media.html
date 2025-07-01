@@ -9,6 +9,24 @@
 
         <!-- tailwind css -->
         <script src="https://cdn.tailwindcss.com"></script>
+
+         <!-- Meta Pixel Code -->
+        <script>
+            !function(f,b,e,v,n,t,s)
+            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+            n.queue=[];t=b.createElement(e);t.async=!0;
+            t.src=v;s=b.getElementsByTagName(e)[0];
+            s.parentNode.insertBefore(t,s)}(window, document,'script',
+            'https://connect.facebook.net/en_US/fbevents.js');
+            fbq('init', '755091480186638');
+            fbq('track', 'PageView');
+        </script>
+        <noscript><img height="1" width="1" style="display:none"
+            src="https://www.facebook.com/tr?id=755091480186638&ev=PageView&noscript=1"
+        /></noscript>
+        <!-- End Meta Pixel Code -->
     </head>
     <body class="flex flex-col min-h-screen">
         <header>
@@ -41,7 +59,7 @@
                 <div class="hidden md:flex items-center w-full">
                     <div class="flex items-center space-x-8">
                         <a href="index.html" class="text-white hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Home</a>
-                        <a href="media.html" class="text-white hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Media</a>
+                        <a href="media.html" class="text-black bg-white hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Media</a>
                         <a href="products.html" class="text-white hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Products</a>
                     </div>
                     <div class="ml-auto flex items-center">
