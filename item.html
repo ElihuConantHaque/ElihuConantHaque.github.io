@@ -6,10 +6,45 @@
         <title>Products - Elihu Conant-Haque</title>
         <link rel="stylesheet" href="style.css">
         <script src="./assets/script.js" defer></script>
-        <script src="./assets/items.js"></script>
-        
+        <script src="./assets/items.js" defer></script>
+
         <!-- tailwind css -->
         <script src="https://cdn.tailwindcss.com"></script>
+        <style>
+            .carousel { position: relative; width: 100%; }
+            .carousel-inner { position: relative; width: 100%; height: 300px; }
+            .carousel-item { position: absolute; width: 100%; transition: transform 0.5s ease; }
+            .carousel-item img { width: 100%; height: auto; }
+            .carousel-prev, .carousel-next { cursor: pointer; font-size: 2rem; }
+        </style>
+
+        <script>
+            document.addEventListener('DOMContentLoaded', function () {
+            const carouselInner = document.querySelector('.carousel-inner');
+            const carouselItems = document.querySelectorAll('.carousel-item');
+            const prevButton = document.querySelector('.carousel-prev');
+            const nextButton = document.querySelector('.carousel-next');
+            let currentIndex = 0;
+
+            function updateCarousel() {
+                carouselItems.forEach((item, index) => {
+                item.style.transform = `translateX(${(index - currentIndex) * 100}%)`;
+                });
+            }
+
+            prevButton.addEventListener('click', () => {
+                currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
+                updateCarousel();
+            });
+
+            nextButton.addEventListener('click', () => {
+                currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
+                updateCarousel();
+            });
+
+            updateCarousel();
+            });
+        </script>
 
         <!-- stylesheet -->
         <link
@@ -68,88 +103,117 @@
                 <!-- Desktop: Menu left, h1 right -->
                 <div class="hidden md:flex items-center w-full">
                     <div class="flex items-center space-x-8">
-                        <a href="index.html" class="text-white hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Home</a>
-                        <a href="media.html" class="text-white hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Media</a>
-                        <a href="products.html" class="text-white hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Products</a>
+                        <a href="index.html" class="text-white text-4xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Home</a>
+                        <a href="media.html" class="text-white text-4xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Media</a>
+                        <a href="products.html" class="text-white text-4xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Products</a>
                     </div>
                     <div class="ml-auto flex items-center">
-                        <h1 class="text-4xl font-bold p-2"><a href="index.html">Elihu S. Conant-Haque</a></h1>
+                        <h1 class="text-6xl font-bold p-2"><a href="index.html">Elihu S. Conant-Haque</a></h1>
                     </div>
                 </div>
             </nav>
         </header>
-        <main class="flex-1 w-full bg-slate-900 text-white flex items-center justify-center">
-            <div class="w-full max-w-7xl p-4 lg:p-8 flex flex-col gap-8">
-                <div class="flex flex-row gap-8">
-                    <div class="w-2/3 flex flex-col gap-4">
-                        <div class="flex flex-row gap-4">
-                            <div id="thumbnail-gallery" class="flex flex-col gap-2 h-full overflow-y-auto"></div>
+        <main class="flex-1 w-screen bg-slate-900 text-white pb-2">
+            <!-- images -->
+            <div class="w-full flex flex-col items-center justify-start relative ">
+                <img src="assets/images/products/Photo 3—1.jpg" alt="Product"
+                     class="w-full h-auto object-contain"
+                     style="background: linear-gradient(to bottom, transparent, #0f172a);" />
+                <h2 class="absolute top-24 left-1/2 transform -translate-x-1/2 text-6xl md:text-8xl font-bold text-white text-center p-6 px-4 md:px-8 py-2 md:py-4 rounded-lg mx-4 shadow-lg fluid-heading w-fit z-20 backdrop-blur backdrop-blur-md">
+                    Elihu Music
+                </h2>
+            </div>
+            <!-- product -->
+            <div class="flex flex-col md:flex-row mx-auto gap-8 mt-8 p-24 min-h-[calc(100vh-8rem)]">
+                <div class="w-2/3 flex flex-col gap-4 mb-8">
+                    <div class="flex flex-row gap-8">
+                        <div id="thumbnail-gallery" class="flex flex-col gap-2 w-20"></div>
 
-                            <div class="flex-grow bg-gray-800 rounded-lg shadow-lg p-2 flex items-center justify-center relative w-full h-[500px] max-w-[600px] overflow-hidden">
-                                <img id="main-product-image" src="https://via.placeholder.com/800x600/374151/ffffff?text=Main+Product+Image" alt="Main Product Image" class="w-full h-full object-contain rounded transition-transform duration-300 flex-grow-0">
-                            </div>
+                        <div class="flex-grow bg-gray-800 rounded-lg shadow-lg p-2 flex items-center justify-center relative">
+                            <img id="main-product-image" src="https://via.placeholder.com/800x600/374151/ffffff?text=Main+Product+Image" alt="Main Product Image" class="w-full h-full object-contain rounded transition-transform duration-300">
                         </div>
+                    </div>                    
+                </div>
 
-                        <div class="bg-gray-800 rounded-lg shadow-lg p-6">
-                            <h3 class="text-lg font-semibold text-white mb-2">Description</h3>
-                            <p class="text-gray-300 text-sm leading-relaxed" id="product-description">
-                                This is a high-quality tuba instrument perfect for professional musicians and serious students. Features excellent craftsmanship and superior sound quality.
-                            </p>
-                        </div>
+
+
+                <div class="bg-gray-800 w-1/3 p-16">
+                    <h1 class="text-3xl font-semibold mb-2 leading-tight text-white" id="product-name">
+                        — Production — 
+                        Eason Zhang and the Crown Instrument Factory
+                    </h1>
+    
+                    <div class="mb-4 ">
+                        <span class="text-3xl font-bold text-red-400 mr-2" id="product-price">$3,449.99</span>
+                        <span class="text-gray-300 text-sm">or Best Offer</span>
                     </div>
 
-                    <div class="w-1/3 bg-gray-800 rounded-lg shadow-lg p-6">
-                        <h1 class="text-2xl font-semibold mb-2 leading-tight text-white" id="product-name">Tuba Brand New</h1>
-    
-                        <div class="mb-4">
-                            <span class="text-3xl font-bold text-red-400 mr-2" id="product-price">$3,449.99</span>
-                            <span class="text-gray-300 text-sm">or Best Offer</span>
-                        </div>
-    
-                        <div class="flex items-center mb-4 text-sm">
-                            <span class="font-semibold mr-2 text-gray-300">Condition:</span>
-                            <span class="text-white" id="product-condition">New</span>
-                            <i class="fas fa-info-circle text-gray-400 ml-1 cursor-pointer" title="Brand new, unused, unopened, undamaged item in its original packaging."></i>
-                        </div>
-                        <div class="flex flex-col gap-3 mb-6">
-                            <button class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-blue-700 transition-colors shadow" id="buy_now">
-                                Buy It Now
-                            </button>
-                            <button class="bg-gray-700 text-white border border-gray-600 font-semibold py-3 px-6 rounded-lg text-lg hover:bg-gray-600 transition-colors" id="add_cart">
-                                Add to cart
-                            </button>
-                            <button class="bg-gray-800 text-white border border-gray-600 font-semibold py-3 px-6 rounded-lg text-lg hover:bg-gray-700 transition-colors" id="make_offer">
-                                Make offer
-                            </button>
-                            <button class="bg-gray-800 text-white border border-gray-600 font-semibold py-3 px-6 rounded-lg text-lg flex items-center justify-center gap-2 hover:bg-gray-700 transition-colors">
-                                <i class="far fa-heart"></i> Add to Watchlist
-                            </button>
-                        </div>
-    
-                        <hr class="my-6 border-gray-600">
-    
-                        <div class="mb-4">
-                            <div class="flex justify-between items-center mb-2">
-                                <span class="text-sm font-semibold text-gray-300">Shipping:</span>
-                                <p class="text-sm text-gray-300">
-                                    <span class="font-bold" id="shipping">Free Expedited Shipping</span>
-                                </p>
-                            </div>
-                            <p class="text-xs text-gray-400 ml-auto pl-[5rem] lg:pl-[4.5rem]">
-                                International shipment of items may be subject to customs processing and additional charges.
-                                <i class="fas fa-info-circle ml-1 cursor-pointer" title="Buyers are responsible for customs duties and fees levied by their country."></i>
-                            </p>
-                        </div>
-    
-                        <div class="flex justify-between items-center mb-4">
-                            <span class="text-sm font-semibold text-gray-300">Returns:</span>
-                            <p class="text-sm text-gray-300">
-                                Seller does not accept returns. <a href="#" class="text-blue-400 hover:underline">See details</a>
-                            </p>
-                        </div>
+                    <div class="flex items-center mb-4 text-xl ">
+                        <span class="font-semibold mr-2 text-gray-300">Condition:</span>
+                        <span class="text-white" id="product-condition">New</span>
+                        <i class="fas fa-info-circle text-gray-400 ml-1 cursor-pointer" title="Brand new, unused, unopened, undamaged item in its original packaging."></i>
+                    </div>
+                    <div class="">
+                        
+                        <!-- <br /> -->
+                        <p class="" id="product-text">
+                            In collaboration with Mr. Eason Zhang and the Crown Musical Instrument Factory, 
+                            Elihu has developed an exclusive line of tubas and euphoniums. These are premium-quality 
+                            instruments made-to-order by Mr. Zhang and his small team. Critical components such as 
+                            valves and linkages were designed with the help of B-Brass in Fiumicino, Italy. 
+                            After being play-tested by Elihu, each horn is cleaned and adjusted by Jon Baltimore, New York City's most 
+                            trusted woodwind-brasswind technician. Instruments are available for play-testing in the Lower East Side of Manhattan. 
+                            Get in touch to try these excellent instruments for yourself!
+                        </p>
+                    </div>
+                    <br /><br />
+                    <div class="flex flex-col gap-3 mb-6">
+                        <button class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-blue-700 transition-colors shadow" id="buy_now">
+                            Buy It Now
+                        </button>
+                        <button class="bg-gray-700 text-white border border-gray-600 font-semibold py-3 px-6 rounded-lg text-lg hover:bg-gray-600 transition-colors" id="add_cart">
+                            Add to cart
+                        </button>
                     </div>
                 </div>
             </div>
+            
+            <div class="w-full max-w-7xl mx-auto px-8 py-8 grid grid-cols-2 gap-8 bg-gray-800">
+                <div class="flex flex-col items-center px-8 py-4">
+                    <h2 class="text-2xl mb-4">Specs</h2>
+                    <p class="w-full" id="product-spec"></p>
+                </div>
+                <div class="flex flex-col items-center px-8 py-4">
+                    <div class="w-full" id="audio"></div>
+                    <button class="bg-gray-800 text-white border border-gray-600 font-semibold py-3 px-6 rounded-lg text-lg hover:bg-gray-700 transition-colors mt-6" id="make_offer" onclick="window.location.href='mailto:elihu@music.com'">
+                        Send Inquiry
+                    </button>
+                </div>
+            </div>
+
+            <div class="w-full max-w-7xl mx-auto px-8 py-8 ">
+                <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
+                    <div class="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0">
+                        <img id="product-q-img1" src="" alt="" class="w-24 h-24 md:w-32 md:h-32 object-cover object-top rounded-full mb-2" loading="lazy">
+                        <p class="text-base text-xl md:text-2xl mt-2" id="product-q-name1"></p>
+                    </div>
+                    <div class="w-full md:w-1/2 flex items-center justify-left">
+                        <p class="text-xl md:text-2xl text-left" id="product-quote1"></p>
+                    </div>
+                </div>
+    
+                <!-- quote2 -->
+                <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
+                    <div class="w-full md:w-1/2 flex items-center justify-left">
+                        <p class="text-xl md:text-2xl text-left" id="product-quote2"></p>
+                    </div>
+                    <div class="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0">
+                        <img id="product-q-img2" class="w-24 h-24 md:w-32 md:h-32 object-cover object-top rounded-full mb-2" loading="lazy">
+                        <p class="text-base text-xl md:text-2xl mt-2" id="product-q-name2"></p>
+                    </div>
+                </div>
+            </div>
+            
         </main>
         <footer class="bg-black text-white text-center py-4">
             <p class="text-sm md:text-base">&copy; 2025 Elihu S. Conant-Haque</p>

@@ -33,7 +33,8 @@
                 });
             });
         </script>
-        <script type="text/javascript" src="https://cdn.appointy.com/web/blob-web/js/appointy-widget.js"></script>
+        <script type="text/javascript" src="https://cdn.appointy.com/web/blob-web/js/appointy-widget.js" defer></script>
+        
 
 
         <!-- tailwind css -->
@@ -102,12 +103,12 @@
                 </nav>
             </header>
             <main class="w-full bg-slate-900 flex-grow">
-                <div class="w-full h-min[calc(100vh-4rem)] flex items-center justify-center bg-cover bg-center relative" style="background-image: url('./assets/images/Photo 1—2.jpeg'); min-height:calc(100vh - 4rem);">
+                <div class="w-full h-min[calc(100vh-4rem)] flex items-center justify-center bg-cover bg-center relative" style="background-image: linear-gradient(to bottom, transparent, rgba(15, 23, 42, 0.9)), url('./assets/images/Photo 1—2.jpeg'); min-height:calc(100vh - 4rem);">
                     <!-- <h2 class="text-4xl md:text-6xl font-extrabold text-white text-center mt-4 drop-shadow-lg bg-black bg-opacity-40 px-6 py-4 rounded-t-lg">
                         Performer and Composer
                     </h2> -->
 
-                    <h2 class="absolute top-8 left-1/2 transform -translate-x-1/2 text-4xl md:text-6xl font-bold text-center bg-black bg-opacity-35 text-white text-opacity-90 px-6 md:px-8 py-3 md:py-4 rounded-lg z-50 mx-4 shadow-lg">
+                    <h2 class="absolute top-8 left-1/2 transform -translate-x-1/2 text-6xl md:text-8xl font-bold text-center bg-black bg-opacity-35 text-white px-6 md:px-8 py-3 md:py-4 rounded-lg z-50 mx-4 shadow-lg">
                         Performer and Composer
                     </h2>
                     <div class="absolute bottom-4 md:bottom-8 left-1/2 transform -translate-x-1/2 w-10 h-10 md:w-12 md:h-12 rounded-full bg-gray-200 flex items-center justify-center z-10 cursor-pointer" onclick="document.getElementById('about-section').scrollIntoView({behavior: 'smooth'})">
@@ -132,7 +133,7 @@
                         alt="photo_1-3"
                         class="w-2/3 max-w-xs md:w-full md:max-w-[33vw] h-auto max-h-[80vh] object-cover rounded-lg mb-4 md:mb-0 md:mr-8 object-top mx-auto md:mx-0"
                     />
-                    <h3 class="w-full md:w-1/3 flex items-center justify-center text-lg md:text-xl p-4 text-center">
+                    <h3 class="w-full md:w-1/3 flex items-center justify-center text-4xl md:text-2xl p-4 text-left">
                         Elihu S. Conant-Haque is a classically trained tuba player and composer living in NYC. 
                         He has won major solo competitions and been featured in a wide variety of music programs 
                         such as TubaBach, MostlyModern, LongPlay, and New Colossus. His compositions have premiered 
@@ -142,15 +143,15 @@
                     </h3>
                 </div>
 
-                <div id='quotes' class="container mx-auto px-4 md:px-8 py-8 text-white">
+                <div id='main-quotes' class="container mx-auto px-4 md:px-8 py-8 text-white">
                     <!-- quote 1 -->
                     <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
                         <div class="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0">
                             <img src="./assets/images/quotes/Carlos Ágreda.png" alt="Carlos Ágreda" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full mb-2" loading="lazy">
-                            <p class="text-base md:text-lg mt-2">Carlos Ágreda</p>
+                            <p class="text-base text-xl md:text-2xl mt-2">Carlos Ágreda - Assistant conductor, LA Phil</p>
                         </div>
-                        <div class="w-full md:w-1/2 flex items-center justify-center">
-                            <p class="text-base md:text-lg text-center">
+                        <div class="w-full md:w-1/2 flex items-center justify-left">
+                            <p class="text-xl md:text-2xl text-left">
                                 Elihu has a rare talent; his technical facilities, his excellent musicality, 
                                 and especially his endless enthusiasm have influenced positively the entire brass section.
                             </p>
@@ -160,15 +161,15 @@
                     <!-- quote2 -->
                     <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
                         <div class="w-full md:w-1/2 flex items-center justify-center mb-4 md:mb-0 order-2 md:order-1">
-                            <p class="text-base md:text-lg text-center">
+                            <p class="text-xl md:text-2xl text-right">
                                 Elihu has distinguished himself as a musician of remarkable sensitivity, intellectual curiosity, and 
                                 technical brilliance, as well as a collaborative and compassionate colleague. In short, I feel like 
                                 his musical potential is limitless.
                             </p>
                         </div>
                         <div class="flex flex-col items-center w-full md:w-1/2 order-1 md:order-2">
-                            <img src="./assets/images/quotes/Christopher Fisher-Lochhead.png" alt="Christopher Fisher-Lochhead" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full mb-2" loading="lazy">
-                            <p class="text-base md:text-lg mt-2">Christopher Fisher-Lochhead</p>
+                            <img src="./assets/images/quotes/Christopher Fisher-Lochhead.png" alt="Christopher Fisher-Lochhead" class="w-24 h-24 md:w-32 md:h-32 object-cover object-top rounded-full mb-2" loading="lazy">
+                            <p class="text-base text-xl md:text-2xl mt-2">Christopher Fisher-Lochhead - Senior Lecturere, RPI</p>
                         </div>
                     </div>
 
@@ -176,10 +177,10 @@
                     <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
                         <div class="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0">
                             <img src="./assets/images/quotes/Chrysi Nanou.png" alt="Chrysi Nanou" class="w-24 h-24 md:w-32 md:h-32 object-cover rounded-full mb-2" loading="lazy">
-                            <p class="text-base md:text-lg mt-2">Chrysi Nanou</p>
+                            <p class="text-base text-xl md:text-2xl mt-2">Chrysi - Nanou CCRMA, Stanford</p>
                         </div>
                         <div class="w-full md:w-1/2 flex items-center justify-center">
-                            <p class="text-base md:text-lg text-center">
+                            <p class="text-xl md:text-2xl text-left">
                                 Elihu is a very flexible musician; he is fluent and versatile in jazz, 
                                 all classical repertoire from baroque to contemporary, and classic rock.
                             </p>
@@ -212,7 +213,7 @@
                         <img src="./assets/images/Photo 1—5.jpeg" alt="lesson image" class="object-cover object-top w-full h-full rounded-lg" />
                         <!-- Card with text on the right -->
                         <div class="card bg-gray-800 bg-opacity-80 rounded-lg shadow-lg p-6 flex flex-col justify-center">
-                            <p class="text-lg md:text-xl mb-4">
+                            <p class="text-4xl md:text-2xl mb-4">
                                 Elihu offers lessons in instrumental technique (tuba/euphonium) and music theory (composing/arranging) 
                                 for the intermediate-to-advanced student. A course of study with Elihu is recommended for aspirational, 
                                 self-motivated young musicians who will take an active role in their learning. His teaching style is 
@@ -221,65 +222,18 @@
                                 play, which promotes positive feelings about practicing. Schedule your free introductory lesson below!
                             </p>
                             <!-- button -->
-                            <button id="bookAppointy" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded transition-colors duration-200 text-center mt-2 w-fit mx-auto cursor-pointer" onclick="window.open('https://booking.appointy.com/ElihuMusic')">Schedule Now!</button>
-                            <!-- <a href="https://booking.appointy.com/ElihuMusic" target="_blank"><img src="https://appointy.com/Images/scheduleme.png" alt="" border="0" /></a> -->
-
-
+                            <!-- <button id="bookAppointy" class="inline-block bg-blue-600 hover:bg-blue-700 text-white font-semibold py-2 px-6 rounded transition-colors duration-200 text-center mt-2 w-fit mx-auto cursor-pointer" onclick="window.open('https://booking.appointy.com/ElihuMusic')">Schedule Now!</button> -->
                             
-
-                            <!-- <script type="text/javascript">
-                                if (typeof(window.Appointy) === 'undefined') {
-                                    window.Appointy = {};
-                                }
-                                window.Appointy.config = {
-                                    business: 'ElihuMusic',
-                                    defaultTab: 'Schedule',
-                                    extraParameter: '',
-                                    buttonImg: '',
-                                    modal: {
-                                        height: '100%',
-                                        width: '100%'
-                                    },
-                                    buttonAlign: "Right", /* You may set 'Left' or 'Right', default value is 'Right'*/
-                                    buttonPosition: "40", /*You may set 'Top', 'Bottom' or any number from 0 to 100, default value is '40'*/
-                                };
-                                jQuery(document).ready(function() {
-                                    jQuery("#bookAppointy").click(function(){
-                                        jQuery("#app-widget-btn").click();
-                                        return false;
-                                    });
-                                });
-                            </script>
-                            <script type="text/javascript" src="https://cdn.appointy.com/web/blob-web/js/appointy-widget.js"></script> -->
-
-
-                            <!-- Widget -->
-                            <!-- <iframe id="appointy-iframe" class="no-border" src="https://booking.appointy.com/ElihuMusic?isgadget=1&autoheight=1"  scrolling="no" width="100%" frameBorder="0"></iframe>
-                            <script>
-                                (function() {
-                                    const ifrm = document.getElementById("appointy-iframe");
-                                    window.addEventListener("message", function (e) {
-                                        const d = e.data || {};
-                                        if (d.type === "height"){
-                                            ifrm.style.height = d.data + "px";
-                                        }
-                                        if (d.type === "scroll") {
-                                            ifrm.scrollIntoView();
-                                        }
-                                    });
-                                })();
-                            </script> -->
-
                         </div>
                     </div>
                 </div>
                 <!-- Social & Contact Section with background image -->
-                <div class="w-full h-[calc(100vh-6rem)] flex flex-col items-center justify-center bg-cover bg-center relative" 
+                <div class="w-full min-h-screen flex flex-col items-center justify-center bg-cover bg-center relative py-12"
                     style="background-image: url('./assets/images/Photo 1—7.png'); background-size: cover; background-position: center; background-repeat: no-repeat;">
                     <!-- Section background image -->
 
                     <!-- Section content (socials + contact) -->
-                    <div class="relative z-10 w-full max-w-2xl mx-auto px-4 background-white bg-opacity-10 backdrop-blur-md rounded-lg shadow-lg p-6">
+                    <div class="relative z-10 w-full max-w-2xl min-h-fit mx-auto px-4 background-white bg-opacity-10 backdrop-blur-md rounded-lg shadow-lg p-6">
                         <!-- Logos Section -->
                         <div class="flex flex-col items-center justify-center mb-6 md:mb-8 p-4 lg:rounded-lg mx-auto">
                             <div class="flex justify-center space-x-2 md:space-x-4 mb-4">
@@ -321,6 +275,7 @@
                                 </button>
                             </div>
                         </form>
+                        <div class="py-8"></div>
                     </div>
                 </div>
             </main>

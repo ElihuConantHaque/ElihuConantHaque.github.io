@@ -25,23 +25,51 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 });
 
-document.addEventListener('DOMContentLoaded', () => {
-  fetch('assets/items.json')
-    .then(response => response.json())
-    .then(products => {
-      const grid = document.getElementById('products');
-      grid.innerHTML = '';
-      products.forEach((product, idx) => {
-        grid.innerHTML += `
-          <a href="item.html?id=${idx}" class="card p-4 flex flex-col h-full items-center bg-white rounded shadow hover:shadow-lg transition-shadow duration-200">
-              <div class="w-full h-64 flex items-center justify-center">
-                  <img src="${product.images[0]}" class="object-contain h-full w-full rounded" />
-              </div>
-              <h2 class="text-2xl text-black mt-4 text-center">${product.title}</h2>
-              <p class="text-gray-600 mt-2 text-center">${product.description}</p>
-              <span class="text-lg text-black font-bold mt-2">$${product.price.toFixed(2)}</span>
-          </a>
-        `;
-      });
-    });
+document.addEventListener('DOMContentLoaded', async function() {
+    // Fetch items.json
+    async function fetchItems() {
+        const response = await fetch('assets/items.json');
+        return await response.json();
+    }
+
+    // Render product cards
+    function renderProducts(products) {
+        const productsDiv = document.getElementById('products');
+        if (!productsDiv) return;
+        productsDiv.innerHTML = '';
+        products.forEach((product, idx) => {
+            // Create card container
+            const card = document.createElement('div');
+            card.className = 'bg-white rounded-lg shadow-md p-4 flex flex-col items-center hover:shadow-xl transition-shadow duration-200';
+            card.style.cursor = 'pointer';
+            card.onclick = () => {
+                window.location.href = `item.html?id=${idx}`;
+            };
+
+            // Product image
+            if (product.images && product.images.length > 0) {
+                const img = document.createElement('img');
+                img.src = product.images[0];
+                img.alt = product.title;
+                img.className = 'w-full h-48 object-contain rounded mb-4';
+                card.appendChild(img);
+            }
+
+            // Product title
+            const title = document.createElement('h2');
+            title.className = 'text-lg font-bold text-center';
+            title.textContent = product.title;
+            card.appendChild(title);
+
+            productsDiv.appendChild(card);
+        });
+    }
+
+    // Main logic
+    try {
+        const items = await fetchItems();
+        renderProducts(items);
+    } catch (err) {
+        console.error('Failed to load product data:', err);
+    }
 });

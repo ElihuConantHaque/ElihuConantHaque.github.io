@@ -1,5 +1,5 @@
 @import "tailwindcss";
-
+@import "tailwindcss/typography";
 @theme {
   --color-slate-50: oklch(0.984 0.003 247.858);
   --color-slate-100: oklch(0.968 0.007 247.896);
@@ -63,4 +63,18 @@
 
   --color-black: #000;
   --color-white: #fff;
+}
+
+/* body { font-size: calc(16px + (26 - 16) * ((100vw - 768px) / (1280 - 768))); }
+@media screen and (max-width: 768px) { body { font-size: 16px; }}
+@media screen and (min-width: 1280px) { body { font-size: 26px; }} */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer components {
+  /* .btn-primary {
+      @apply py-1.5 px-3 text-center bg-blue-700 rounded-md text-white;
+  } */
 }

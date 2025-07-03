@@ -1,22 +1,91 @@
 [
     {
-        "title": "Tuba",
+        "title": "EBB-605P — 5-Valve Piston Tuba, 6/4 BBb",
+        "name":"",
+        "condition": "New",
         "images": [
-            "assets/images/products/Products_ Main Images/Product 1 Photo 1.jpg",
-            "assets/images/products/Products_ Main Images/Product 2 Photo 2.jpg",
-            "assets/images/products/Products_ Main Images/Product 3 Photo 1.jpg"
+            "assets/images/products/Products_ Main Images/Product 1 Photo 1.jpg"
         ],
-        "description": "A beautiful tuba recording. High quality, professionally mastered.",
+        "audio": [
+            "assets/Audio/Audio 1 — BWV 1007 - IV. Sarabande.wav",
+            "assets/Audio/Audio 1 — BWV 1007 - IV. Sarabande.wav",
+            "assets/Audio/Audio 1 — BWV 1007 - IV. Sarabande.wav"
+        ],
+        "text": "In collaboration with Mr. Eason Zhang and the Crown Musical Instrument Factory, Elihu has developed an exclusive line of tubas and euphoniums. These are premium-quality instruments made-to-order by Mr. Zhang and his small team. Critical components such as valves and linkages were designed with the help of B-Brass in Fiumicino, Italy. After being play-tested by Elihu, each horn is cleaned and adjusted by Jon Baltimore, New York City's most trusted woodwind-brasswind technician. Instruments are available for play-testing in the Lower East Side of Manhattan. Get in touch to try these excellent instruments for yourself!",
         "price": 19.99,
+        "spec": "5-valve piston tuba, 6/4 BBb, 19.5\" bell, 0.750\" bore, 4.5\" leadpipe, 4.5\" main tuning slide, 3.5\" first valve slide, 3.0\" second valve slide, 2.5\" third valve slide, 2.0\" fourth valve slide, 1.5\" fifth valve slide",
+        "quote1": "Elihu has a rare talent; his technical facilities, his excellent musicality, and especially his endless enthusiasm have influenced positively the entire brass section.",
+        "quote2": "Elihu has distinguished himself as a musician of remarkable sensitivity, intellectual curiosity, and technical brilliance, as well as a collaborative and compassionate colleague. In short, I feel like his musical potential is limitless.",
+        "quote1Name": "Carlos Ágreda - Assistant conductor, LA Phil",
+        "quote2Name": "Christopher Fisher-Lochhead - Senior Lecturer, RPI",
+        "quote1Img": "assets/images/quotes/Carlos Ágreda.png",
+        "quote2Img": "assets/images/quotes/Christopher Fisher-Lochhead.png",
         "stripeLink": "https://buy.stripe.com/test_28EaEX3Dr0as7NEbWh5wI02"
     },
     {
-        "title": "Machine",
+        "title": "EBB-605P — 5-Valve Piston Tuba, 6/4 BBb",
+        "name":"",
         "images": [
-            "assets/images/products/Photo 2—2.jpg"
+            "assets/images/products/Products_ Main Images/Product 2 Photo 2.jpg"
         ],
-        "description": "Euphonium solo album with a variety of styles.",
-        "price": 15.99,
-        "stripeLink": "https://buy.stripe.com/test_1234567890abcdef"
+        "audio": [
+            "assets/Audio/Audio 1 — BWV 1007 - IV. Sarabande.wav",
+            "assets/Audio/Audio 1 — BWV 1007 - IV. Sarabande.wav",
+            "assets/Audio/Audio 1 — BWV 1007 - IV. Sarabande.wav"
+        ],
+        "text": "In collaboration with Mr. Eason Zhang and the Crown Musical Instrument Factory, Elihu has developed an exclusive line of tubas and euphoniums. These are premium-quality instruments made-to-order by Mr. Zhang and his small team. Critical components such as valves and linkages were designed with the help of B-Brass in Fiumicino, Italy. After being play-tested by Elihu, each horn is cleaned and adjusted by Jon Baltimore, New York City's most trusted woodwind-brasswind technician. Instruments are available for play-testing in the Lower East Side of Manhattan. Get in touch to try these excellent instruments for yourself!",
+        "price": 19.99,
+        "spec": "5-valve piston tuba, 6/4 BBb, 19.5\" bell, 0.750\" bore, 4.5\" leadpipe, 4.5\" main tuning slide, 3.5\" first valve slide, 3.0\" second valve slide, 2.5\" third valve slide, 2.0\" fourth valve slide, 1.5\" fifth valve slide",
+        "quote1": "Elihu has a rare talent; his technical facilities, his excellent musicality, and especially his endless enthusiasm have influenced positively the entire brass section.",
+        "quote2": "Elihu has distinguished himself as a musician of remarkable sensitivity, intellectual curiosity, and technical brilliance, as well as a collaborative and compassionate colleague. In short, I feel like his musical potential is limitless.",
+        "quote1Name": "Carlos Ágreda - Assistant conductor, LA Phil",
+        "quote2Name": "Christopher Fisher-Lochhead - Senior Lecturer, RPI",
+        "quote1Img": "assets/images/quotes/Carlos Ágreda.png",
+        "quote2Img": "assets/images/quotes/Christopher Fisher-Lochhead.png",
+        "stripeLink": "https://buy.stripe.com/test_28EaEX3Dr0as7NEbWh5wI02"
+    },
+    {
+        "title": "EBB-605P — 5-Valve Piston Tuba, 6/4 BBb",
+        "name":"",
+        "images": [
+            "assets/images/products/Products_ Main Images/Product 2 Photo 2.jpg"
+        ],
+        "audio": [
+            "assets/Audio/Audio 1 — BWV 1007 - IV. Sarabande.wav",
+            "assets/Audio/Audio 1 — BWV 1007 - IV. Sarabande.wav",
+            "assets/Audio/Audio 1 — BWV 1007 - IV. Sarabande.wav"
+        ],
+        "text": "In collaboration with Mr. Eason Zhang and the Crown Musical Instrument Factory, Elihu has developed an exclusive line of tubas and euphoniums. These are premium-quality instruments made-to-order by Mr. Zhang and his small team. Critical components such as valves and linkages were designed with the help of B-Brass in Fiumicino, Italy. After being play-tested by Elihu, each horn is cleaned and adjusted by Jon Baltimore, New York City's most trusted woodwind-brasswind technician. Instruments are available for play-testing in the Lower East Side of Manhattan. Get in touch to try these excellent instruments for yourself!",
+        "price": 19.99,
+        "spec": "5-valve piston tuba, 6/4 BBb, 19.5\" bell, 0.750\" bore, 4.5\" leadpipe, 4.5\" main tuning slide, 3.5\" first valve slide, 3.0\" second valve slide, 2.5\" third valve slide, 2.0\" fourth valve slide, 1.5\" fifth valve slide",
+        "quote1": "Elihu has a rare talent; his technical facilities, his excellent musicality, and especially his endless enthusiasm have influenced positively the entire brass section.",
+        "quote2": "Elihu has distinguished himself as a musician of remarkable sensitivity, intellectual curiosity, and technical brilliance, as well as a collaborative and compassionate colleague. In short, I feel like his musical potential is limitless.",
+        "quote1Name": "Carlos Ágreda - Assistant conductor, LA Phil",
+        "quote2Name": "Christopher Fisher-Lochhead - Senior Lecturer, RPI",
+        "quote1Img": "assets/images/quotes/Carlos Ágreda.png",
+        "quote2Img": "assets/images/quotes/Christopher Fisher-Lochhead.png",
+        "stripeLink": "https://buy.stripe.com/test_28EaEX3Dr0as7NEbWh5wI02"
+    },
+    {
+        "title": "EBB-605P — 5-Valve Piston Tuba, 6/4 BBb",
+        "name":"",
+        "images": [
+            "assets/images/products/Products_ Main Images/Product 3 Photo 1.jpg"
+        ],
+        "audio": [
+            "assets/Audio/Audio 1 — BWV 1007 - IV. Sarabande.wav",
+            "assets/Audio/Audio 1 — BWV 1007 - IV. Sarabande.wav",
+            "assets/Audio/Audio 1 — BWV 1007 - IV. Sarabande.wav"
+        ],
+        "text": "In collaboration with Mr. Eason Zhang and the Crown Musical Instrument Factory, Elihu has developed an exclusive line of tubas and euphoniums. These are premium-quality instruments made-to-order by Mr. Zhang and his small team. Critical components such as valves and linkages were designed with the help of B-Brass in Fiumicino, Italy. After being play-tested by Elihu, each horn is cleaned and adjusted by Jon Baltimore, New York City's most trusted woodwind-brasswind technician. Instruments are available for play-testing in the Lower East Side of Manhattan. Get in touch to try these excellent instruments for yourself!",
+        "price": 19.99,
+        "spec": "5-valve piston tuba, 6/4 BBb, 19.5\" bell, 0.750\" bore, 4.5\" leadpipe, 4.5\" main tuning slide, 3.5\" first valve slide, 3.0\" second valve slide, 2.5\" third valve slide, 2.0\" fourth valve slide, 1.5\" fifth valve slide",
+        "quote1": "Elihu has a rare talent; his technical facilities, his excellent musicality, and especially his endless enthusiasm have influenced positively the entire brass section.",
+        "quote2": "Elihu has distinguished himself as a musician of remarkable sensitivity, intellectual curiosity, and technical brilliance, as well as a collaborative and compassionate colleague. In short, I feel like his musical potential is limitless.",
+        "quote1Name": "Carlos Ágreda - Assistant conductor, LA Phil",
+        "quote2Name": "Christopher Fisher-Lochhead - Senior Lecturer, RPI",
+        "quote1Img": "assets/images/quotes/Carlos Ágreda.png",
+        "quote2Img": "assets/images/quotes/Christopher Fisher-Lochhead.png",
+        "stripeLink": "https://buy.stripe.com/test_28EaEX3Dr0as7NEbWh5wI02"
     }
 ]
