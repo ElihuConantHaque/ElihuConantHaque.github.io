@@ -1,81 +1,77 @@
 <!DOCTYPE html>
     <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Products - Elihu Conant-Haque</title>
-        <link rel="stylesheet" href="style.css">
-        <script src="./assets/script.js" defer></script>
-        <script src="./assets/items.js" defer></script>
-
-        <!-- Font Awesome -->
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
-        
-        <!-- tailwind css -->
-        <script src="https://cdn.tailwindcss.com"></script>
-        <style>
-            .carousel { position: relative; width: 100%; }
-            .carousel-inner { position: relative; width: 100%; height: 300px; }
-            .carousel-item { position: absolute; width: 100%; transition: transform 0.5s ease; }
-            .carousel-item img { width: 100%; height: auto; }
-            .carousel-prev, .carousel-next { cursor: pointer; font-size: 2rem; }
-        </style>
-
-        <script>
-            document.addEventListener('DOMContentLoaded', function () {
-            const carouselInner = document.querySelector('.carousel-inner');
-            const carouselItems = document.querySelectorAll('.carousel-item');
-            const prevButton = document.querySelector('.carousel-prev');
-            const nextButton = document.querySelector('.carousel-next');
-            let currentIndex = 0;
-
-            function updateCarousel() {
-                carouselItems.forEach((item, index) => {
-                item.style.transform = `translateX(${(index - currentIndex) * 100}%)`;
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Elihu S. Conant-Haque</title>
+            
+            <!-- <link rel="stylesheet" href="style.css"> -->
+            <script src="./assets/script.js" defer></script>
+            <script src="./assets/items.js" defer></script>
+            <script src="https://smtpjs.com/v3/smtp.js" defer></script>
+            
+            <!-- Google Fonts - Cinzel -->
+            <link rel="preconnect" href="https://fonts.googleapis.com">
+            <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+            <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+            <!-- Google Fonts - Montserrat -->
+            <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    
+            <script type="text/javascript" defer>
+                if (typeof(window.Appointy) === 'undefined') {
+                    window.Appointy = {};
+                }
+                window.Appointy.config = {
+                    business: 'ElihuMusic',
+                    defaultTab: 'Schedule',
+                    extraParameter: '',
+                    buttonImg: '',
+                    modal: {
+                        height: '100%',
+                        width: '100%'
+                    },
+                    buttonAlign: "Right", /* You may set 'Left' or 'Right', default value is 'Right'*/
+                    buttonPosition: "40", /*You may set 'Top', 'Bottom' or any number from 0 to 100, default value is '40'*/
+                };
+                jQuery(document).ready(function() {
+                    jQuery("#booking-btn").click(function(){
+                        jQuery("#app-widget-btn").click();
+                        return false;
+                    });
                 });
-            }
-
-            prevButton.addEventListener('click', () => {
-                currentIndex = (currentIndex > 0) ? currentIndex - 1 : carouselItems.length - 1;
-                updateCarousel();
-            });
-
-            nextButton.addEventListener('click', () => {
-                currentIndex = (currentIndex < carouselItems.length - 1) ? currentIndex + 1 : 0;
-                updateCarousel();
-            });
-
-            updateCarousel();
-            });
-        </script>
-
-        <!-- stylesheet -->
-        <link
-            rel="stylesheet"
-            href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
-        />
-        
-        <!-- script -->
-        <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
-
-         <!-- Meta Pixel Code -->
-        <script>
-            !function(f,b,e,v,n,t,s)
-            {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
-            n.callMethod.apply(n,arguments):n.queue.push(arguments)};
-            if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
-            n.queue=[];t=b.createElement(e);t.async=!0;
-            t.src=v;s=b.getElementsByTagName(e)[0];
-            s.parentNode.insertBefore(t,s)}(window, document,'script',
-            'https://connect.facebook.net/en_US/fbevents.js');
-            fbq('init', '755091480186638');
-            fbq('track', 'PageView');
-        </script>
-        <noscript><img height="1" width="1" style="display:none"
-            src="https://www.facebook.com/tr?id=755091480186638&ev=PageView&noscript=1"
-        /></noscript>
-        <!-- End Meta Pixel Code -->
-    </head>
+            </script>
+            <!-- <script type="text/javascript" src="https://cdn.appointy.com/web/blob-web/js/appointy-widget.js" defer></script> -->
+            
+    
+    
+    
+            <!-- tailwind css -->
+            <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+            <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+            <link rel="stylesheet" href="assets/style.css">
+    
+            <!-- Meta Pixel Code -->
+            <script>
+                !function(f,b,e,v,n,t,s)
+                {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+                n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+                if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+                n.queue=[];t=b.createElement(e);t.async=!0;
+                t.src=v;s=b.getElementsByTagName(e)[0];
+                s.parentNode.insertBefore(t,s)}(window, document,'script',
+                'https://connect.facebook.net/en_US/fbevents.js');
+                fbq('init', '755091480186638');
+                fbq('track', 'PageView');
+            </script>
+            <noscript><img height="1" width="1" style="display:none"
+                src="https://www.facebook.com/tr?id=755091480186638&ev=PageView&noscript=1"
+            /></noscript>
+            <!-- End Meta Pixel Code -->
+            
+            
+        </head>
     <body class="flex flex-col min-h-screen bg-slate-900">
         <header>
             <nav class="bg-black text-white shadow-lg w-full h-16 flex items-center justify-between px-4 relative">
@@ -94,9 +90,10 @@
 
                         <!-- Mobile Dropdown -->
                         <div id="dropdown-menu" class="hidden absolute w-48 bg-black rounded-md shadow-lg z-20">
-                            <a href="index.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Home</a>
-                            <a href="media.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Media</a>
-                            <a href="products.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Products</a>
+                            <a href="index.html" class="block px-4 py-2 text-white font-marcellus-regular font-bold hover:bg-gray-800 rounded">Home</a>
+                            
+                            <a href="media.html" class="block px-4 py-2 text-white font-marcellus-regular font-bold hover:bg-gray-800 rounded">Media</a>
+                            <a href="products.html" class="block px-4 py-2 text-white font-marcellus-regular font-bold hover:bg-gray-800 rounded">Products</a>
                             <div class="border-t border-gray-700 my-1"></div>
                             <a href="#" class="block px-4 py-2 text-white hover:bg-gray-800 rounded flex items-center">
                                 <i class='fas fa-shopping-cart mr-2'></i>Cart
@@ -119,7 +116,7 @@
 
                     <!-- Right: Title -->
                     <div class="flex items-center">
-                        <h1 class="text-xl font-bold p-4"><a href="index.html">E S C-H</a></h1>
+                        <h1 class="text-xl font-bold font-cinzel p-4"><a href="index.html">E S C-H</a></h1>
                     </div>
                 </div>
 
@@ -127,9 +124,9 @@
                 <div class="hidden md:flex items-center w-full">
                     <!-- Left Section -->
                     <div class="flex items-center space-x-8 h-full">
-                        <a href="index.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Home</a>
-                        <a href="media.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Media</a>
-                        <a href="products.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Products</a>
+                        <a href="index.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors font-marcellus-regular font-bold p-4 h-full flex items-center">Home</a>
+                        <a href="media.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors font-marcellus-regular font-bold p-4 h-full flex items-center">Media</a>
+                        <a href="products.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors font-marcellus-regular font-bold p-4 h-full flex items-center">Products</a>
                     </div>
 
                     <!-- Center Section -->
@@ -144,7 +141,7 @@
 
                     <!-- Right Section -->
                     <div class="flex items-center space-x-4">
-                        <h1 class="text-4xl font-bold p-2"><a href="index.html">Elihu S. Conant-Haque</a></h1>
+                        <h1 class="text-4xl font-bold p-2 font-cinzel"><a href="index.html">Elihu S. Conant-Haque</a></h1>
                     </div>
                 </div>
             </nav>
@@ -210,6 +207,9 @@
                         <button class="bg-gray-700 text-white border border-gray-600 font-semibold py-3 px-4 md:px-6 rounded-lg text-base md:text-lg hover:bg-gray-600 transition-colors" id="add_cart">
                             Add to cart
                         </button>
+                        <button class="bg-gray-800 text-white border border-gray-600 font-semibold py-3 px-4 md:px-6 rounded-lg text-base md:text-lg hover:bg-gray-700 transition-colors mt-6" id="make_offer" onclick="window.location.href='mailto:elihu@music.com'">
+                            Send Inquiry
+                        </button>
                     </div>
                 </div>
             </div>
@@ -227,9 +227,7 @@
                         <!-- Right Column: Audio and Button -->
                         <div class="flex flex-col items-center px-4 md:px-8 py-4">
                             <div class="w-full" id="audio"></div>
-                            <button class="bg-gray-800 text-white border border-gray-600 font-semibold py-3 px-4 md:px-6 rounded-lg text-base md:text-lg hover:bg-gray-700 transition-colors mt-6" id="make_offer" onclick="window.location.href='mailto:elihu@music.com'">
-                                Send Inquiry
-                            </button>
+                            
                         </div>
                     </div>
                 </div>

@@ -15,7 +15,11 @@
 
         <!-- tailwind css -->
         <script src="https://cdn.tailwindcss.com"></script>
-
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&family=Marcellus&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
          <!-- Meta Pixel Code -->
         <script>
             !function(f,b,e,v,n,t,s)
@@ -34,14 +38,7 @@
         /></noscript>
         <!-- End Meta Pixel Code -->
 
-        <!-- <style>
-            .fluid-heading {
-                font-size: clamp(2.5rem, 7vw, 3.75rem); /* min 2.5rem, max 3.75rem (60px) */
-            }
-            .fluid-text {
-                font-size: clamp(1.5rem, 5vw, 3.75rem); /* min 1.5rem, max 3.75rem (60px) */
-            }
-        </style> -->
+    
     </head>
     <body class="flex flex-col min-h-screen">
         <header>
@@ -61,9 +58,10 @@
 
                         <!-- Mobile Dropdown -->
                         <div id="dropdown-menu" class="hidden absolute w-48 bg-black rounded-md shadow-lg z-20">
-                            <a href="index.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Home</a>
-                            <a href="media.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Media</a>
-                            <a href="products.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Products</a>
+                            <a href="index.html" class="block px-4 py-2 text-white font-marcellus-regular font-bold hover:bg-gray-800 rounded">Home</a>
+                            
+                            <a href="media.html" class="block px-4 py-2 text-white font-marcellus-regular font-bold hover:bg-gray-800 rounded">Media</a>
+                            <a href="products.html" class="block px-4 py-2 text-white font-marcellus-regular font-bold hover:bg-gray-800 rounded">Products</a>
                             <div class="border-t border-gray-700 my-1"></div>
                             <a href="#" class="block px-4 py-2 text-white hover:bg-gray-800 rounded flex items-center">
                                 <i class='fas fa-shopping-cart mr-2'></i>Cart
@@ -86,7 +84,7 @@
 
                     <!-- Right: Title -->
                     <div class="flex items-center">
-                        <h1 class="text-xl font-bold p-4"><a href="index.html">E S C-H</a></h1>
+                        <h1 class="text-xl font-bold font-cinzel p-4"><a href="index.html">E S C-H</a></h1>
                     </div>
                 </div>
 
@@ -94,9 +92,9 @@
                 <div class="hidden md:flex items-center w-full">
                     <!-- Left Section -->
                     <div class="flex items-center space-x-8 h-full">
-                        <a href="index.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Home</a>
-                        <a href="media.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Media</a>
-                        <a href="products.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Products</a>
+                        <a href="index.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors font-marcellus-regular font-bold p-4 h-full flex items-center">Home</a>
+                        <a href="media.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors font-marcellus-regular font-bold p-4 h-full flex items-center">Media</a>
+                        <a href="products.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors font-marcellus-regular font-bold p-4 h-full flex items-center">Products</a>
                     </div>
 
                     <!-- Center Section -->
@@ -111,7 +109,7 @@
 
                     <!-- Right Section -->
                     <div class="flex items-center space-x-4">
-                        <h1 class="text-4xl font-bold p-2"><a href="index.html">Elihu S. Conant-Haque</a></h1>
+                        <h1 class="text-4xl font-bold p-2 font-cinzel"><a href="index.html">Elihu S. Conant-Haque</a></h1>
                     </div>
                 </div>
             </nav>
@@ -121,7 +119,7 @@
             <div class="w-full min-h-[calc(100vh-8rem)] flex flex-col bg-cover bg-center relative py-8"
                  style="background-image: linear-gradient(to bottom, transparent 60%, #0f172a 100%), url('./assets/images/Photo 1—5.jpeg');">
                 <div class="flex flex-col flex-grow justify-between items-center w-full mx-auto h-full">
-                    <h2 id="responsive_headline" class="mt-8 font-bold lg:text-4xl xl:text-6xl text-white text-center backdrop-blur px-4 md:px-8 py-2 md:py-4 rounded-lg mx-4 shadow-lg w-fit">
+                    <h2 id="responsive_headline" class="mt-8 font-bold lg:text-4xl xl:text-6xl text-white text-center backdrop-blur px-4 md:px-8 py-2 md:py-4 rounded-lg mx-4 shadow-lg w-fit font-cinzel" >
                         Media — Recordings, Performances, and More
                     </h2>
                     <p id="responsive_text" class="mb-8 backdrop-blur lg:text-2xl xl:text-4xl text-white text-center w-2/3 p-4 rounded-lg shadow-lg z-10 drop-shadow-lg font-bold fluid-text"
@@ -137,28 +135,28 @@
                 <div id="videos" class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6 w-full md:w-2/3 mx-auto">
                     <div class="h-fit bg-gray-800 p-3 md:p-4 rounded-lg shadow-lg flex flex-col items-center">
                         <iframe class="w-full h-fit md:h-64 rounded-lg" src="https://www.youtube.com/embed/l6GR-UgarRM?si=bwsa9A6myNGIRwkt" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <h3 class="text-lg md:text-xl font-semibold text-white mb-2 text-center mt-3">Czardas - Tuba & Piano</h3>
+                        <h3 class="text-2xl md:text-3xl text-white mb-2 text-center mt-3 font-cinzel">Czardas - Tuba & Piano</h3>
                     </div>
 
                     <div class="bg-gray-800 p-3 md:p-4 rounded-lg shadow-lg flex flex-col items-center">
                         <iframe class="w-full h-48 md:h-64 rounded-lg" src="https://www.youtube.com/embed/8TnivypO0jg?si=hg_hxOEJWvj5YJQ5" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <h3 class="text-lg md:text-xl font-semibold text-white mb-2 text-center mt-3">Angel's Tango</h3>
+                        <h3 class="text-2xl md:text-3xl text-white mb-2 text-center mt-3 font-cinzel">Angel's Tango</h3>
                     </div>
                     
                     <div class="bg-gray-800 p-3 md:p-4 rounded-lg shadow-lg flex flex-col items-center">
                         <iframe class="w-full h-48 md:h-64 rounded-lg" src="https://www.youtube.com/embed/kZGf2cVXQmA?si=u2sy3nyyjoL5TdAm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <h3 class="text-lg md:text-xl font-semibold text-white mb-2 text-center mt-3">Bass Tuba, Evening Recital</h3>
+                        <h3 class="text-2xl md:text-3xl text-white mb-2 text-center mt-3 font-cinzel">Bass Tuba, Evening Recital</h3>
                     </div>
 
                     <div class="bg-gray-800 p-3 md:p-4 rounded-lg shadow-lg flex flex-col items-center">
                         <iframe class="w-full h-48 md:h-64 rounded-lg" src="https://www.youtube.com/embed/xePquH9W5zc?si=b6UzW2g4vXMu8EqC" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-                        <h3 class="text-lg md:text-xl font-semibold text-white mb-2 text-center mt-3">Tico Tico no Fubá</h3>
+                        <h3 class="text-2xl md:text-3xl text-white mb-2 text-center mt-3 font-cinzel">Tico Tico no Fubá</h3>
                     </div>
                 </div>
             </div>
 
             <div class="w-full px-4 md:px-8 py-4 md:py-8">
-                <h2 class="text-xl md:text-4xl font-bold text-white text-center mb-4 md:mb-6">Recordings & Demos</h2>
+                <h2 class="text-xl md:text-4xl font-bold text-white text-center mb-4 md:mb-6 font-montserrat">Recordings & Demos</h2>
                 <div id="audio" class="flex flex-col md:flex-row gap-4 md:gap-6 w-full md:w-2/3 mx-auto">
                     <!-- Left Column - First 4 audio files -->
                     <div class="flex flex-col gap-4 md:gap-6 w-full md:w-1/2">
@@ -192,9 +190,9 @@
                         </div>
                     </div>
                     
-                    <!-- Right Column - Last 4 audio files -->
+                    
                     <div class="flex flex-col gap-4 md:gap-6 w-full md:w-1/2">
-                        <h3 class="text-2xl md:text-3xl font-bold text-white mb-4 text-center">Jazz, Pop, Game & Film</h3>
+                        <h3 class="text-2xl md:text-3xl font-bold font-montserrat text-white mb-4 text-center">Jazz, Pop, Game & Film</h3>
                         <div class="bg-gray-800 p-3 md:p-4 rounded-lg shadow-lg flex flex-col items-center">
                             <h3 class="text-lg md:text-xl font-semibold text-white mb-3 text-center">Ljósgeisli ft. Lúpína</h3>
                             <audio controls class="w-full rounded-lg">

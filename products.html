@@ -3,24 +3,36 @@
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Products - Elihu Conant-Haque</title>
-        <link rel="stylesheet" href="style.css">
+        <title>Elihu S. Conant-Haque</title>
+        
+        <!-- <link rel="stylesheet" href="style.css"> -->
         <script src="./assets/script.js" defer></script>
-        <script src="./assets/products.js" defer></script>
+        <script src="./assets/contact.js" defer></script>
+        <script src="assets/items.js"></script>
+        <script src="assets/products.js"></script>
+        <script src="https://smtpjs.com/v3/smtp.js" defer></script>
         
+        <!-- Google Fonts - Cinzel -->
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        <!-- Google Fonts - Montserrat -->
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+
+        
+        <!-- <script type="text/javascript" src="https://cdn.appointy.com/web/blob-web/js/appointy-widget.js" defer></script> -->
+        <script type="text/javascript" src="test.js" defer></script>
+
+
+
         <!-- tailwind css -->
-        <script src="https://cdn.tailwindcss.com"></script>
+        <!-- <script src="https://cdn.tailwindcss.com"></script> -->
+        <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        <link rel="stylesheet" href="assets/style.css">
 
-        <!-- stylesheet -->
-        <link
-        rel="stylesheet"
-        href="https://unpkg.com/@material-tailwind/html@latest/styles/material-tailwind.css"
-        />
-        
-        <!-- script -->
-        <script src="https://unpkg.com/@material-tailwind/html@latest/scripts/script-name.js"></script>
-
-         <!-- Meta Pixel Code -->
+        <!-- Meta Pixel Code -->
         <script>
             !function(f,b,e,v,n,t,s)
             {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
@@ -37,8 +49,11 @@
             src="https://www.facebook.com/tr?id=755091480186638&ev=PageView&noscript=1"
         /></noscript>
         <!-- End Meta Pixel Code -->
+        
+        
     </head>
-    <body>
+    <!-- <body class="bg-gray-50 min-h-screen flex flex-col"> -->
+    <body class="flex flex-col min-h-screen">
         <header>
             <nav class="bg-black text-white shadow-lg w-full h-16 flex items-center justify-between px-4 relative">
                 <!-- Mobile: Menu button left, icons center, h1 right -->
@@ -56,9 +71,10 @@
 
                         <!-- Mobile Dropdown -->
                         <div id="dropdown-menu" class="hidden absolute w-48 bg-black rounded-md shadow-lg z-20">
-                            <a href="index.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Home</a>
-                            <a href="media.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Media</a>
-                            <a href="products.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Products</a>
+                            <a href="index.html" class="block px-4 py-2 text-white font-marcellus-regular font-bold hover:bg-gray-800 rounded">Home</a>
+                            
+                            <a href="media.html" class="block px-4 py-2 text-white font-marcellus-regular font-bold hover:bg-gray-800 rounded">Media</a>
+                            <a href="products.html" class="block px-4 py-2 text-white font-marcellus-regular font-bold hover:bg-gray-800 rounded">Products</a>
                             <div class="border-t border-gray-700 my-1"></div>
                             <a href="#" class="block px-4 py-2 text-white hover:bg-gray-800 rounded flex items-center">
                                 <i class='fas fa-shopping-cart mr-2'></i>Cart
@@ -81,7 +97,7 @@
 
                     <!-- Right: Title -->
                     <div class="flex items-center">
-                        <h1 class="text-xl font-bold p-4"><a href="index.html">E S C-H</a></h1>
+                        <h1 class="text-xl font-bold font-cinzel p-4"><a href="index.html">E S C-H</a></h1>
                     </div>
                 </div>
 
@@ -89,9 +105,9 @@
                 <div class="hidden md:flex items-center w-full">
                     <!-- Left Section -->
                     <div class="flex items-center space-x-8 h-full">
-                        <a href="index.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Home</a>
-                        <a href="media.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Media</a>
-                        <a href="products.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Products</a>
+                        <a href="index.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors font-marcellus-regular font-bold p-4 h-full flex items-center">Home</a>
+                        <a href="media.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors font-marcellus-regular font-bold p-4 h-full flex items-center">Media</a>
+                        <a href="products.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors font-marcellus-regular font-bold p-4 h-full flex items-center">Products</a>
                     </div>
 
                     <!-- Center Section -->
@@ -106,7 +122,7 @@
 
                     <!-- Right Section -->
                     <div class="flex items-center space-x-4">
-                        <h1 class="text-4xl font-bold p-2"><a href="index.html">Elihu S. Conant-Haque</a></h1>
+                        <h1 class="text-4xl font-bold p-2 font-cinzel"><a href="index.html">Elihu S. Conant-Haque</a></h1>
                     </div>
                 </div>
             </nav>
@@ -114,7 +130,7 @@
         <main class="w-max-screen bg-white">
             <div class="w-full h-auto lg:min-h-[calc(100vh-8rem)] flex flex-col items-center justify-center bg-cover bg-center relative"
                 style="background-image: linear-gradient(to bottom, transparent, white), url('assets/images/products/Photo 2—20.jpg'); overflow: hidden;">
-                <p class="relative bottom-4 md:bottom-16 transform text-black bg-white bg-opacity-20 backdrop-blur-md text-center p-2 md:p-6 text-lg md:text-xl lg:text-2xl w-full md:w-2/3 rounded-lg z-10 font-bold responsive-text">
+                <p class="relative bottom-4 md:bottom-16 transform text-black font-monserrat backdrop-blur-md text-center p-2 md:p-6 text-lg md:text-xl lg:text-2xl w-2/3 md:w-2/3 h-rounded-lg z-10 font-bold responsive-text">
                     In collaboration with Mr. Eason Zhang and the Crown Musical Instrument Factory,
                     Elihu has developed an exclusive line of tubas and euphoniums. These are premium-quality
                     instruments made-to-order by Mr. Zhang and his small team. Critical components such as valves
@@ -134,8 +150,8 @@
                     Eason Zhang and the Crown Instrument Factory
                 </p>
                 
-                <div class="flex-1"></div>
-                <div class="relative w-2/3 max-w-4xl min-h-fit md-auto overflow-hidden mb-8 z-10">
+                <!-- <div class="flex-1"></div> -->
+                <div class="relative w-2/3 max-w-2/3 min-h-fit md-auto overflow-hidden mb-8 z-10">
                     <div id="carousel" class="flex transition-transform duration-500 ease-in-out items-center justify-center">
                       <!-- Previous Preview -->
                       <img id="prevImg" class="max-w-[8rem] max-h-[8rem] md:max-w-[12rem] md:max-h-[12rem] object-contain rounded-lg opacity-60 cursor-pointer transition-transform duration-300 hover:scale-105 bg-white" />
@@ -153,7 +169,7 @@
                     <div class="pointer-events-none absolute inset-x-0 bottom-0 h-24 bg-gradient-to-b from-transparent to-slate-900"></div>
                 </div>
                 <script src="assets/carousel.js"></script>
-                <p class="text-lg md:text-2xl text-center text-white mt-8 px-4 md:px-16 w-full md:w-3/4 mx-auto p-4">
+                <p class="text-xl md:text-4xl font-monserrat text-center text-white font-monserrat mt-8 px-4 md:px-16 w-full md:w-3/4 mx-auto p-4">
                     Nestled in the beaucolic countryside of China's Shandong province, the Crown Instrument Factory is a bustling workshop
                     that produces all types of wind and brass instruments. The team is led by Eason Zhang (张新星), a seasoned instrument
                     builder and businessman. Elihu has made many trips to China to visit the factory, meet the craftsmen, and advise the
