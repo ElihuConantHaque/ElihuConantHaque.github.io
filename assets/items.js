@@ -62,8 +62,8 @@ document.addEventListener('DOMContentLoaded', async function() {
         const productName = document.getElementById('product-name');
         if (productName) productName.textContent = product.title;
         // Description
-        const productDescription = document.getElementById('product-description');
-        if (productDescription) productDescription.textContent = product.description;
+        const productText = document.getElementById('product-text');
+        if (productText) productText.textContent = product.text;
         // Buy Now button
         const buyNowBtn = document.getElementById('buy_now');
         if (buyNowBtn && product.stripeLink) {

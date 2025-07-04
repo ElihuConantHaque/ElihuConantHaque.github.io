@@ -8,6 +8,9 @@
         <script src="./assets/script.js" defer></script>
         <script src="./assets/items.js" defer></script>
 
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+        
         <!-- tailwind css -->
         <script src="https://cdn.tailwindcss.com"></script>
         <style>
@@ -76,8 +79,9 @@
     <body class="flex flex-col min-h-screen bg-slate-900">
         <header>
             <nav class="bg-black text-white shadow-lg w-full h-16 flex items-center justify-between px-4 relative">
-                <!-- Mobile: Menu button left, h1 right -->
+                <!-- Mobile: Menu button left, icons center, h1 right -->
                 <div class="flex items-center w-full md:hidden">
+                    <!-- Left: Menu Button -->
                     <div class="relative inline-block text-left m-4">
                         <!-- Button -->
                         <button id="menu-button" type="button" class="inline-flex items-center justify-center p-2 rounded-md text-white hover:text-yellow-400 hover:bg-gray-700 focus:outline-none focus:ring-2 focus:ring-white">
@@ -93,123 +97,164 @@
                             <a href="index.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Home</a>
                             <a href="media.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Media</a>
                             <a href="products.html" class="block px-4 py-2 text-white hover:bg-gray-800 rounded">Products</a>
+                            <div class="border-t border-gray-700 my-1"></div>
+                            <a href="#" class="block px-4 py-2 text-white hover:bg-gray-800 rounded flex items-center">
+                                <i class='fas fa-shopping-cart mr-2'></i>Cart
+                            </a>
+                            <a href="#" class="block px-4 py-2 text-white hover:bg-gray-800 rounded flex items-center">
+                                <i class='fas fa-user mr-2'></i>Login
+                            </a>
                         </div>
                     </div>
-                    <div class="ml-auto">
+
+                    <!-- Center: Shopping Cart and Login -->
+                    <div class="flex-1 flex items-center justify-center space-x-4">
+                        <a href="#" class="text-white hover:text-yellow-400 p-2">
+                            <i class='fas fa-shopping-cart' style='font-size:24px'></i>
+                        </a>
+                        <a href="#" class="text-white hover:text-yellow-400 text-lg font-semibold px-2 py-1">
+                            login
+                        </a>
+                    </div>
+
+                    <!-- Right: Title -->
+                    <div class="flex items-center">
                         <h1 class="text-xl font-bold p-4"><a href="index.html">E S C-H</a></h1>
                     </div>
                 </div>
 
                 <!-- Desktop: Menu left, h1 right -->
                 <div class="hidden md:flex items-center w-full">
-                    <div class="flex items-center space-x-8">
-                        <a href="index.html" class="text-white text-4xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Home</a>
-                        <a href="media.html" class="text-white text-4xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Media</a>
-                        <a href="products.html" class="text-white text-4xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Products</a>
+                    <!-- Left Section -->
+                    <div class="flex items-center space-x-8 h-full">
+                        <a href="index.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Home</a>
+                        <a href="media.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Media</a>
+                        <a href="products.html" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">Products</a>
                     </div>
-                    <div class="ml-auto flex items-center">
-                        <h1 class="text-6xl font-bold p-2"><a href="index.html">Elihu S. Conant-Haque</a></h1>
+
+                    <!-- Center Section -->
+                    <div class="flex-1 flex items-center justify-center">
+                        <a href="#" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">
+                            <i class='fas fa-shopping-cart' style='font-size:36px'></i>
+                        </a>
+                        <!-- Login Icon/Button -->
+                        <a href="#" class="text-white text-2xl hover:bg-white hover:text-black transition-colors p-4 h-full flex items-center">login</a>
+                        
+                    </div>
+
+                    <!-- Right Section -->
+                    <div class="flex items-center space-x-4">
+                        <h1 class="text-4xl font-bold p-2"><a href="index.html">Elihu S. Conant-Haque</a></h1>
                     </div>
                 </div>
             </nav>
         </header>
-        <main class="flex-1 w-screen bg-slate-900 text-white pb-2">
-            <!-- images -->
-            <div class="w-full flex flex-col items-center justify-start relative ">
+        <main class="flex-1 w-full bg-slate-900 text-white pb-2">
+            <!-- Hero Section -->
+            <div class="w-full flex flex-col items-center justify-start relative">
                 <img src="assets/images/products/Photo 3—1.jpg" alt="Product"
-                     class="w-full h-auto object-contain"
+                     class="w-full h-auto object-cover md:object-contain"
                      style="background: linear-gradient(to bottom, transparent, #0f172a);" />
-                <h2 class="absolute top-24 left-1/2 transform -translate-x-1/2 text-6xl md:text-8xl font-bold text-white text-center p-6 px-4 md:px-8 py-2 md:py-4 rounded-lg mx-4 shadow-lg fluid-heading w-fit z-20 backdrop-blur backdrop-blur-md">
+                <h2 class="absolute top-8 md:top-24 left-1/2 transform -translate-x-1/2 text-2xl md:text-6xl lg:text-8xl font-bold text-white text-center p-4 md:p-6 px-2 md:px-8 py-2 md:py-4 rounded-lg mx-2 md:mx-4 shadow-lg w-fit z-20 backdrop-blur backdrop-blur-md">
                     Elihu Music
                 </h2>
             </div>
-            <!-- product -->
-            <div class="flex flex-col md:flex-row mx-auto gap-8 mt-8 p-24 min-h-[calc(100vh-8rem)]">
-                <div class="w-2/3 flex flex-col gap-4 mb-8">
-                    <div class="flex flex-row gap-8">
-                        <div id="thumbnail-gallery" class="flex flex-col gap-2 w-20"></div>
+            
+            <!-- Product Section -->
+            <div class="flex flex-col lg:flex-row mx-auto gap-4 md:gap-8 mt-4 md:mt-8 p-4 md:p-8 lg:p-24 min-h-[calc(100vh-8rem)]">
+                <!-- Product Images -->
+                <div class="w-full lg:w-2/3 flex flex-col gap-4 mb-4 md:mb-8">
+                    <div class="flex flex-col md:flex-row gap-4 md:gap-8 h-full">
+                        <div id="thumbnail-gallery" class="flex flex-row md:flex-col gap-2 w-full md:w-20"></div>
 
-                        <div class="flex-grow bg-gray-800 rounded-lg shadow-lg p-2 flex items-center justify-center relative">
+                        <div class="flex-grow bg-gray-800 rounded-lg shadow-lg p-2 flex items-center justify-center relative min-h-[300px] md:min-h-[400px] lg:h-full">
                             <img id="main-product-image" src="https://via.placeholder.com/800x600/374151/ffffff?text=Main+Product+Image" alt="Main Product Image" class="w-full h-full object-contain rounded transition-transform duration-300">
                         </div>
                     </div>                    
                 </div>
 
-
-
-                <div class="bg-gray-800 w-1/3 p-16">
-                    <h1 class="text-3xl font-semibold mb-2 leading-tight text-white" id="product-name">
-                        — Production — 
-                        Eason Zhang and the Crown Instrument Factory
+                <!-- Product Details -->
+                <div class="bg-gray-800 w-full lg:w-1/3 p-4 md:p-8 lg:p-16 rounded-lg flex flex-col justify-between">
+                    <h1 class="text-xl md:text-2xl lg:text-3xl font-semibold mb-2 leading-tight text-white" id="product-name">
+                        <!-- — Production — 
+                        Eason Zhang and the Crown Instrument Factory -->
                     </h1>
     
-                    <div class="mb-4 ">
-                        <span class="text-3xl font-bold text-red-400 mr-2" id="product-price">$3,449.99</span>
+                    <div class="mb-4">
+                        <span class="text-2xl md:text-3xl font-bold text-red-400 mr-2" id="product-price">$3,449.99</span>
                         <span class="text-gray-300 text-sm">or Best Offer</span>
                     </div>
 
-                    <div class="flex items-center mb-4 text-xl ">
+                    <div class="flex items-center mb-4 text-lg md:text-xl">
                         <span class="font-semibold mr-2 text-gray-300">Condition:</span>
                         <span class="text-white" id="product-condition">New</span>
-                        <i class="fas fa-info-circle text-gray-400 ml-1 cursor-pointer" title="Brand new, unused, unopened, undamaged item in its original packaging."></i>
+                        <!-- <i class="fas fa-info-circle text-gray-400 ml-1 cursor-pointer" title="Brand new, unused, unopened, undamaged item in its original packaging."></i> -->
                     </div>
-                    <div class="">
-                        
-                        <!-- <br /> -->
-                        <p class="" id="product-text">
-                            In collaboration with Mr. Eason Zhang and the Crown Musical Instrument Factory, 
+                    
+                    <div class="mb-6">
+                        <p class="text-sm md:text-base leading-relaxed" id="product-text">
+                            <!-- In collaboration with Mr. Eason Zhang and the Crown Musical Instrument Factory, 
                             Elihu has developed an exclusive line of tubas and euphoniums. These are premium-quality 
                             instruments made-to-order by Mr. Zhang and his small team. Critical components such as 
                             valves and linkages were designed with the help of B-Brass in Fiumicino, Italy. 
                             After being play-tested by Elihu, each horn is cleaned and adjusted by Jon Baltimore, New York City's most 
                             trusted woodwind-brasswind technician. Instruments are available for play-testing in the Lower East Side of Manhattan. 
-                            Get in touch to try these excellent instruments for yourself!
+                            Get in touch to try these excellent instruments for yourself! -->
                         </p>
                     </div>
-                    <br /><br />
-                    <div class="flex flex-col gap-3 mb-6">
-                        <button class="bg-blue-600 text-white font-bold py-3 px-6 rounded-lg text-lg hover:bg-blue-700 transition-colors shadow" id="buy_now">
+                    
+                    <div class="flex flex-col gap-3 mb-6 mt-8 md:mt-12">
+                        <button class="bg-blue-600 text-white font-bold py-3 px-4 md:px-6 rounded-lg text-base md:text-lg hover:bg-blue-700 transition-colors shadow" id="buy_now">
                             Buy It Now
                         </button>
-                        <button class="bg-gray-700 text-white border border-gray-600 font-semibold py-3 px-6 rounded-lg text-lg hover:bg-gray-600 transition-colors" id="add_cart">
+                        <button class="bg-gray-700 text-white border border-gray-600 font-semibold py-3 px-4 md:px-6 rounded-lg text-base md:text-lg hover:bg-gray-600 transition-colors" id="add_cart">
                             Add to cart
                         </button>
                     </div>
                 </div>
             </div>
             
-            <div class="w-full max-w-7xl mx-auto px-8 py-8 grid grid-cols-2 gap-8 bg-gray-800">
-                <div class="flex flex-col items-center px-8 py-4">
-                    <h2 class="text-2xl mb-4">Specs</h2>
-                    <p class="w-full" id="product-spec"></p>
-                </div>
-                <div class="flex flex-col items-center px-8 py-4">
-                    <div class="w-full" id="audio"></div>
-                    <button class="bg-gray-800 text-white border border-gray-600 font-semibold py-3 px-6 rounded-lg text-lg hover:bg-gray-700 transition-colors mt-6" id="make_offer" onclick="window.location.href='mailto:elihu@music.com'">
-                        Send Inquiry
-                    </button>
+            <!-- Specs and Audio Section -->
+            <div class="w-full max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-8">
+                <div class="bg-gray-800 rounded-lg mx-4 md:mx-8">
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8 max-w-6xl mx-auto">
+                        <!-- Left Column: Specs -->
+                        <div class="flex flex-col items-center px-4 md:px-8 py-4">
+                            <h2 class="text-sm md:text-base lg:text-xl xl:text-2xl mt-2 text-center">Specs</h2>
+                            <p class="text-sm md:text-base lg:text-xl xl:text-2xl mt-2 text-left" id="product-spec"></p>
+                        </div>
+                        
+                        <!-- Right Column: Audio and Button -->
+                        <div class="flex flex-col items-center px-4 md:px-8 py-4">
+                            <div class="w-full" id="audio"></div>
+                            <button class="bg-gray-800 text-white border border-gray-600 font-semibold py-3 px-4 md:px-6 rounded-lg text-base md:text-lg hover:bg-gray-700 transition-colors mt-6" id="make_offer" onclick="window.location.href='mailto:elihu@music.com'">
+                                Send Inquiry
+                            </button>
+                        </div>
+                    </div>
                 </div>
             </div>
 
-            <div class="w-full max-w-7xl mx-auto px-8 py-8 ">
-                <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
+            <!-- Testimonials Section -->
+            <div class="w-full max-w-7xl mx-auto px-4 md:px-8 py-4 md:py-8">
+                <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-4 md:mb-8 max-w-6xl">
                     <div class="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0">
-                        <img id="product-q-img1" src="" alt="" class="w-24 h-24 md:w-32 md:h-32 object-cover object-top rounded-full mb-2" loading="lazy">
-                        <p class="text-base text-xl md:text-2xl mt-2" id="product-q-name1"></p>
+                        <img id="product-q-img1" src="" alt="" class="w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 object-cover object-top rounded-full mb-2" loading="lazy">
+                        <p class="text-sm md:text-base lg:text-xl xl:text-2xl mt-2 text-center" id="product-q-name1"></p>
                     </div>
-                    <div class="w-full md:w-1/2 flex items-center justify-left">
-                        <p class="text-xl md:text-2xl text-left" id="product-quote1"></p>
+                    <div class="w-full md:w-1/2 flex items-center justify-center md:justify-start">
+                        <p class="text-base md:text-lg lg:text-xl xl:text-2xl text-center md:text-left" id="product-quote1"></p>
                     </div>
                 </div>
     
-                <!-- quote2 -->
-                <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-6 md:mb-8">
-                    <div class="w-full md:w-1/2 flex items-center justify-left">
-                        <p class="text-xl md:text-2xl text-left" id="product-quote2"></p>
+                <!-- Quote 2 -->
+                <div class="card w-full bg-gray-800 p-4 md:p-8 rounded-lg shadow-lg flex flex-col md:flex-row items-center mx-auto mb-4 md:mb-8 max-w-6xl">
+                    <div class="w-full md:w-1/2 flex items-center justify-center md:justify-start order-2 md:order-1">
+                        <p class="text-base md:text-lg lg:text-xl xl:text-2xl text-center md:text-left" id="product-quote2"></p>
                     </div>
-                    <div class="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0">
-                        <img id="product-q-img2" class="w-24 h-24 md:w-32 md:h-32 object-cover object-top rounded-full mb-2" loading="lazy">
-                        <p class="text-base text-xl md:text-2xl mt-2" id="product-q-name2"></p>
+                    <div class="flex flex-col items-center w-full md:w-1/2 mb-4 md:mb-0 order-1 md:order-2">
+                        <img id="product-q-img2" class="w-20 h-20 md:w-24 md:h-24 lg:w-32 lg:h-32 object-cover object-top rounded-full mb-2" loading="lazy">
+                        <p class="text-sm md:text-base lg:text-xl xl:text-2xl mt-2 text-center" id="product-q-name2"></p>
                     </div>
                 </div>
             </div>
@@ -223,3 +268,4 @@
         
     </body>
 </html>
+
